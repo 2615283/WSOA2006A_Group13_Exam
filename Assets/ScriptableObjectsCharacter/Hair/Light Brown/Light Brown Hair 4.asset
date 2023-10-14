@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35e256f79330b84e9d2aef8ce692ffe, type: 3}
+  m_Name: Light Brown Hair 4
+  m_EditorClassIdentifier: 
+  partName: Light Brown Hair 5
+  partID: 4
+  partAnimations:
+  - {fileID: 7400000, guid: 715dcf4b7c328224ea22812772982bb2, type: 2}
+  - {fileID: 7400000, guid: f6df984830de0a645a0b3b94cf8d711f, type: 2}
+  - {fileID: 7400000, guid: 624ea14f4664fcd42b726f740471b942, type: 2}
+  - {fileID: 7400000, guid: 168e23143fb72a44488a90339547a551, type: 2}
+  - {fileID: 7400000, guid: aa4912d558abd344ca28ecec1ae67739, type: 2}
+  - {fileID: 7400000, guid: 7c5bd3b841984964585c4ddeb7e151f2, type: 2}
+  - {fileID: 7400000, guid: 05616d8d21af8814eac27937bb03780c, type: 2}
+  - {fileID: 7400000, guid: 1605e3324958ea346b0e287af3c243f9, type: 2}

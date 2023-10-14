@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35e256f79330b84e9d2aef8ce692ffe, type: 3}
+  m_Name: Pink Hair 4
+  m_EditorClassIdentifier: 
+  partName: Pink Hair 5
+  partID: 4
+  partAnimations:
+  - {fileID: 7400000, guid: bebac2339269d404990db52379e74691, type: 2}
+  - {fileID: 7400000, guid: a51687aa9e6e1374494aac8dde36c121, type: 2}
+  - {fileID: 7400000, guid: 69af11bdba17eeb4da23659374b4a631, type: 2}
+  - {fileID: 7400000, guid: 2466f59d3df7d7b4eb9102056d3c3709, type: 2}
+  - {fileID: 7400000, guid: 9aa9f7bc55fc2944d88d95632fc4790a, type: 2}
+  - {fileID: 7400000, guid: aa5d428d12e1d81459c0a36b54abe49f, type: 2}
+  - {fileID: 7400000, guid: 6a5d54f461616634fb2eb1dadb9e17a1, type: 2}
+  - {fileID: 7400000, guid: cf66f7a6c1a0dbb499f6616c2e715ec1, type: 2}

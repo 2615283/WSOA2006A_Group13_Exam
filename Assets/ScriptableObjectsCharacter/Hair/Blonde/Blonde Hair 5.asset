@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35e256f79330b84e9d2aef8ce692ffe, type: 3}
+  m_Name: Blonde Hair 5
+  m_EditorClassIdentifier: 
+  partName: Blonde Hair 6
+  partID: 5
+  partAnimations:
+  - {fileID: 7400000, guid: fea946914b34d4f44a66da5e08415419, type: 2}
+  - {fileID: 7400000, guid: fdbb30809e05f5649945946a55652d56, type: 2}
+  - {fileID: 7400000, guid: 120c3cff552e7bd4d8500c00871eadde, type: 2}
+  - {fileID: 7400000, guid: cfb09c543bc4b4b4a8baf2a13d9450f5, type: 2}
+  - {fileID: 7400000, guid: cd5dcaf95a714ea48ba58e951757872b, type: 2}
+  - {fileID: 7400000, guid: 165a9845bd98f734b80a09092709dae0, type: 2}
+  - {fileID: 7400000, guid: 08ed49620b28ea44e87910993fdc23d8, type: 2}
+  - {fileID: 7400000, guid: 28ad3f3b38a9cce45ad72d438e5090a8, type: 2}
