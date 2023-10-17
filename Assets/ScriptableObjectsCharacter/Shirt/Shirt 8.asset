@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35e256f79330b84e9d2aef8ce692ffe, type: 3}
+  m_Name: Shirt 8
+  m_EditorClassIdentifier: 
+  partName: Green Long Collar Shirt
+  partID: 8
+  partAnimations:
+  - {fileID: 7400000, guid: 72ef41331ce2e9d448a991a987077d7b, type: 2}
+  - {fileID: 7400000, guid: d41b9e9b30e7bbc4b9ebd2312fdd0607, type: 2}
+  - {fileID: 7400000, guid: 0fb1a2e96b73c1f4c8c0af95125f5957, type: 2}
+  - {fileID: 7400000, guid: ab0b2fb46b500524c944b0558745aa50, type: 2}
+  - {fileID: 7400000, guid: 87ec04c6c5929574195581aa2b9ed559, type: 2}
+  - {fileID: 7400000, guid: c2aeec8944826464eb3677172da80595, type: 2}
+  - {fileID: 7400000, guid: 3f5ee63218301cb44ad349c035047654, type: 2}
+  - {fileID: 7400000, guid: 4f01898d6746e124e81a031c4f27d41e, type: 2}

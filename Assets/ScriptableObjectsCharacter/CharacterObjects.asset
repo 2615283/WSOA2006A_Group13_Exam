@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d77a0c2eac74744af8628d92b13c99, type: 3}
   m_Name: CharacterObjects
   m_EditorClassIdentifier: 
-  parts: []
+  parts:
+  - partName: Body
+    part: {fileID: 11400000, guid: f6134a986154bdc4c8cbe04720afabeb, type: 2}
+  - partName: Hair
+    part: {fileID: 11400000, guid: f23a3016e6bc0b349a5eb25d740bcd57, type: 2}
+  - partName: Pants
+    part: {fileID: 11400000, guid: 79b2c096ca15674428ec365dc0ebb0b2, type: 2}
+  - partName: Shirt
+    part: {fileID: 11400000, guid: 73f9df62f90e27e45899b472a1d979f2, type: 2}

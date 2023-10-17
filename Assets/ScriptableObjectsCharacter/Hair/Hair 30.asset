@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35e256f79330b84e9d2aef8ce692ffe, type: 3}
+  m_Name: Hair 30
+  m_EditorClassIdentifier: 
+  partName: Brown Hair 7
+  partID: 30
+  partAnimations:
+  - {fileID: 7400000, guid: a55e7d657623760448742f813af31f1c, type: 2}
+  - {fileID: 7400000, guid: 44492e78c82534e4ca4461cead6f51a3, type: 2}
+  - {fileID: 7400000, guid: 363fd0dc0df2c5b48aedfe57c279cf0f, type: 2}
+  - {fileID: 7400000, guid: fb319cd158b304a44aa508fffe607354, type: 2}
+  - {fileID: 7400000, guid: 1c763e61607482e4b9f5866503620f19, type: 2}
+  - {fileID: 7400000, guid: bea2254ea0c0fd148bd5f39fdbd71765, type: 2}
+  - {fileID: 7400000, guid: e283b49fa21442a4d97aaf04d82a1d13, type: 2}
+  - {fileID: 7400000, guid: 6adbe556422e4354192dd6a236ee2c27, type: 2}

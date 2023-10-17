@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35e256f79330b84e9d2aef8ce692ffe, type: 3}
+  m_Name: Shirt 5
+  m_EditorClassIdentifier: 
+  partName: Blue Long Shirt
+  partID: 5
+  partAnimations:
+  - {fileID: 7400000, guid: f891bd052c5aa8a43977e6feb8766917, type: 2}
+  - {fileID: 7400000, guid: afd7616180f89a040b8dadd1212313f0, type: 2}
+  - {fileID: 7400000, guid: d5cabba195dd3ca43baebe0719ad96f7, type: 2}
+  - {fileID: 7400000, guid: bae3c2afaa90ac14286f7209520400f8, type: 2}
+  - {fileID: 7400000, guid: af3920f03962b294898d2cf5f44581da, type: 2}
+  - {fileID: 7400000, guid: 06871dbd54a17a44299781154ba06002, type: 2}
+  - {fileID: 7400000, guid: 35ab70dee38c9154fb1e29089f962a67, type: 2}
+  - {fileID: 7400000, guid: 1ec63fa0e47020c429db393fb80bc23f, type: 2}
