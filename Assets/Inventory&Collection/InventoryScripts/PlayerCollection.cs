@@ -24,14 +24,13 @@ public class PlayerCollection : MonoBehaviour
         Food = new List<string>();
 
         Inventory = new List<string>();
+
     }
 
     void Update()
     {
-        for (int i = 0; i < Inventory.Count; i++)
-        {
-            InventoryDisplay.text = Inventory[i] + "\n";
-        }
+        string result = string.Join("\n", Inventory);
+        InventoryDisplay.text = result;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
