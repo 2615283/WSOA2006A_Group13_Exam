@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerCollection : MonoBehaviour
@@ -13,6 +14,9 @@ public class PlayerCollection : MonoBehaviour
     [Header("NPC UI")]
     public bool NPCNear = false;
 
+    [Header("Display")]
+    public TMP_Text InventoryDisplay;
+
     void Start()
     {
         Herbs = new List<string>();
@@ -24,7 +28,10 @@ public class PlayerCollection : MonoBehaviour
 
     void Update()
     {
-
+        for (int i = 0; i < Inventory.Count; i++)
+        {
+            InventoryDisplay.text = Inventory[i] + "\n";
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

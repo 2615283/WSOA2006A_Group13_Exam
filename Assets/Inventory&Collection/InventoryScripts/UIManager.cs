@@ -75,7 +75,6 @@ public class UIManager : MonoBehaviour
     public void ResetGame()
     {
         SceneManager.LoadScene("UI Test");
-        StartScreen.SetActive(false);
         Time.timeScale = 1;
     }
 
