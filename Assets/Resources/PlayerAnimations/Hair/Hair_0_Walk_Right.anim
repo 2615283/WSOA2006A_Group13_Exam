@@ -25,13 +25,13 @@ AnimationClip:
     - time: 0.16666667
       value: {fileID: 1099929699, guid: b577b65e569e61c41b66575f6e5a5b3d, type: 3}
     - time: 0.33333334
-      value: {fileID: 2017344371, guid: b577b65e569e61c41b66575f6e5a5b3d, type: 3}
+      value: {fileID: 71311270, guid: b577b65e569e61c41b66575f6e5a5b3d, type: 3}
     - time: 0.5
-      value: {fileID: 1557991568, guid: b577b65e569e61c41b66575f6e5a5b3d, type: 3}
+      value: {fileID: 1099929699, guid: b577b65e569e61c41b66575f6e5a5b3d, type: 3}
     - time: 0.6666667
-      value: {fileID: 2017344371, guid: b577b65e569e61c41b66575f6e5a5b3d, type: 3}
+      value: {fileID: 71311270, guid: b577b65e569e61c41b66575f6e5a5b3d, type: 3}
     attribute: m_Sprite
-    path: 
+    path: Hair
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -43,7 +43,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 1019596327
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -54,9 +54,9 @@ AnimationClip:
     pptrCurveMapping:
     - {fileID: 71311270, guid: b577b65e569e61c41b66575f6e5a5b3d, type: 3}
     - {fileID: 1099929699, guid: b577b65e569e61c41b66575f6e5a5b3d, type: 3}
-    - {fileID: 2017344371, guid: b577b65e569e61c41b66575f6e5a5b3d, type: 3}
-    - {fileID: 1557991568, guid: b577b65e569e61c41b66575f6e5a5b3d, type: 3}
-    - {fileID: 2017344371, guid: b577b65e569e61c41b66575f6e5a5b3d, type: 3}
+    - {fileID: 71311270, guid: b577b65e569e61c41b66575f6e5a5b3d, type: 3}
+    - {fileID: 1099929699, guid: b577b65e569e61c41b66575f6e5a5b3d, type: 3}
+    - {fileID: 71311270, guid: b577b65e569e61c41b66575f6e5a5b3d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
