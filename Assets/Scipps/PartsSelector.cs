@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class PartsSelector : MonoBehaviour
 {
     [SerializeField]
     private FullCharacter character;
     [SerializeField] private PartSelection[] partSelections;
-   
+
 
     private void Start()
     {
@@ -72,7 +72,7 @@ public class PartsSelector : MonoBehaviour
         partSelections[IndexParts].partCurrentInd = character.parts[IndexParts].part.partID;
     }
 
-    private void UpdateParts(int IndexParts)
+    public void UpdateParts(int IndexParts)
     {
         partSelections[IndexParts].partNameTXT.text = partSelections[IndexParts].partOptions[partSelections[IndexParts].partCurrentInd].partName;
 
@@ -84,7 +84,7 @@ public class PartsSelector : MonoBehaviour
     {
         public string partName;
         public CharacterCreatorData[] partOptions;
-        public Text partNameTXT;
-        [HideInInspector] public int partCurrentInd;
+        public TextMeshProUGUI partNameTXT;
+        public int partCurrentInd;
     }
 }

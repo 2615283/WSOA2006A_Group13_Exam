@@ -29,6 +29,8 @@ public class PartsManager : MonoBehaviour
         animOverrideCont.GetOverrides(animOverrides);
 
         PartsUpdate();
+
+        
     }
 
     public void PartsUpdate()
