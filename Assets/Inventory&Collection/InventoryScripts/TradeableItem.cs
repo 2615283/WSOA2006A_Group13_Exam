@@ -1,12 +1,10 @@
 using TMPro;
 using UnityEngine;
-using static UnityEditor.Progress;
 
-public class CollectableScript : MonoBehaviour
+public class TradeableItem : MonoBehaviour
 {
     public PlayerCollection Collected;
     public GameObject Player;
-    public TMP_Text TaskDisplay;
 
     void Start()
     {
@@ -25,8 +23,6 @@ public class CollectableScript : MonoBehaviour
         {
             gameObject.SetActive(false);
             Collected.Inventory.Add(gameObject.name);
-            TaskDisplay.color = Color.gray;
-            TaskDisplay.fontStyle = FontStyles.Strikethrough;
         }
     }
 }

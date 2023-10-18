@@ -6,9 +6,6 @@ public class PlayerCollection : MonoBehaviour
 {
     [Header("Collecting:")]
     public bool Found = false;
-    public List<string> Herbs;
-    public List<string> Plants;
-    public List<string> Food;
     public List<string> Inventory;
 
     [Header("NPC UI")]
@@ -17,14 +14,10 @@ public class PlayerCollection : MonoBehaviour
     [Header("Display")]
     public TMP_Text InventoryDisplay;
 
+
     void Start()
     {
-        Herbs = new List<string>();
-        Plants = new List<string>();
-        Food = new List<string>();
-
         Inventory = new List<string>();
-
     }
 
     void Update()
