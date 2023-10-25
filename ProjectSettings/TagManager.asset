@@ -10,7 +10,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
@@ -45,4 +45,7 @@ TagManager:
     locked: 0
   - name: Objects
     uniqueID: 3651849569
+    locked: 0
+  - name: Player
+    uniqueID: 1999017499
     locked: 0
