@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using static UnityEditor.Progress;
@@ -6,7 +7,15 @@ public class CollectableScript : MonoBehaviour
 {
     public PlayerCollection Collected;
     public GameObject Player;
-    public TMP_Text TaskDisplay;
+    public TMP_Text MainTaskDisplay;
+
+    [Header("Task Checks:")]
+    public bool MainTask;
+    public bool Task1;
+    public bool Task2;
+    public bool Task3;
+    public bool Task4;
+    public bool Task5;
 
     void Start()
     {
@@ -25,8 +34,8 @@ public class CollectableScript : MonoBehaviour
         {
             gameObject.SetActive(false);
             Collected.Inventory.Add(gameObject.name);
-            TaskDisplay.color = Color.gray;
-            TaskDisplay.fontStyle = FontStyles.Strikethrough;
+            MainTaskDisplay.color = Color.gray;
+            MainTaskDisplay.fontStyle = FontStyles.Strikethrough;
         }
     }
 }
