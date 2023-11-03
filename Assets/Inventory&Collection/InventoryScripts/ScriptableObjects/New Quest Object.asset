@@ -10,8 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8c63943b12e47b4783cad7ffc314f28, type: 3}
-  m_Name: Herb
+  m_Name: New Quest Object
   m_EditorClassIdentifier: 
-  Name: Aloe Vera
-  Type: Quest 1
-  Tradeable: 0
+  Name: Tutorial
+  Description: A Little boy is injured and needs your help to collect medicine to
+    heal him.
+  RequiredItems:
+  - Stick
+  - Aleo Vera
+  - Comfrey Leaves
+  RewardItem: {fileID: 2477594963654402711, guid: 438b83eb29825074f821b0a27da23bba, type: 3}
+  QuestActivated: 0
