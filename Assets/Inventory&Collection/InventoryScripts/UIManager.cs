@@ -38,10 +38,10 @@ public class UIManager : MonoBehaviour
         }
 
         //opens Task Screen
-        if (Input.GetKeyDown(KeyCode.T))
+        /*if (Input.GetKeyDown(KeyCode.T))
         {
             TaskScreen.SetActive(true);
-        }
+        }*/
 
         //opens Inventory Screen
         if (Input.GetKeyDown(KeyCode.E))
