@@ -31,6 +31,9 @@ public class TaskManager : MonoBehaviour
 
     private void Update()
     {
-        
+        if (Quest1.Count == 2)
+        {
+            CompleteTask1 = true;
+        }
     }
 }

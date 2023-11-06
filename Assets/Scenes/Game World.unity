@@ -72136,7 +72136,12 @@ MonoBehaviour:
   Found: 0
   Inventory: []
   NPCNear: 0
+  CheckInteraction: {fileID: 1053856099}
+  CheckInteractionManager: {fileID: 1053856098}
   InventoryDisplay: {fileID: 297065066}
+  ActivateTask: {fileID: 146849753}
+  TaskManager: {fileID: 146849752}
+  NPCQuest: 0
 --- !u!1 &453774520
 GameObject:
   m_ObjectHideFlags: 0
@@ -77760,6 +77765,22 @@ PrefabInstance:
     - target: {fileID: 2607962242059145653, guid: 5f7a51a9491809840853b92e88c78ab0, type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611600185184173638, guid: 5f7a51a9491809840853b92e88c78ab0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611600185184173638, guid: 5f7a51a9491809840853b92e88c78ab0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1053856099}
+    - target: {fileID: 3611600185184173638, guid: 5f7a51a9491809840853b92e88c78ab0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FinishDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611600185184173638, guid: 5f7a51a9491809840853b92e88c78ab0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5244235819159151455, guid: 5f7a51a9491809840853b92e88c78ab0, type: 3}
       propertyPath: m_Name
@@ -94253,6 +94274,18 @@ PrefabInstance:
     - target: {fileID: 5785701016447935230, guid: dd419519f8a3dbf4d827093e62345b50, type: 3}
       propertyPath: m_Name
       value: NPC1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256989258929565792, guid: dd419519f8a3dbf4d827093e62345b50, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256989258929565792, guid: dd419519f8a3dbf4d827093e62345b50, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256989258929565792, guid: dd419519f8a3dbf4d827093e62345b50, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9575404
       objectReference: {fileID: 0}
     - target: {fileID: 7256989258929565792, guid: dd419519f8a3dbf4d827093e62345b50, type: 3}
       propertyPath: m_SortingOrder

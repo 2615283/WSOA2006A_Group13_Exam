@@ -34,42 +34,101 @@ public class CollectableScript : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (Collected.Found)
-        {
-            gameObject.SetActive(false);
-            Collected.Inventory.Add(gameObject.name);
-            MainTaskDisplay.color = Color.gray;
-            MainTaskDisplay.fontStyle = FontStyles.Strikethrough;
-        }
 
         if (TutorialTask == true)
         {
-            TaskManager.TutorialQuest.Add(gameObject.name);
+            if (TaskManager.ActivatedTutorialTask == true)
+            {
+                if (Collected.Found)
+                {
+                    gameObject.SetActive(false);
+                    Collected.Inventory.Add(gameObject.name);
+                    MainTaskDisplay.color = Color.gray;
+                    MainTaskDisplay.fontStyle = FontStyles.Strikethrough;
+                }
+
+                TaskManager.TutorialQuest.Add(gameObject.name);
+            }
         }
 
         if (Task1 == true)
         {
-            TaskManager.Quest1.Add(gameObject.name);
+            if (TaskManager.ActivatedTask1 == true)
+            {
+                if (Collected.Found)
+                {
+                    gameObject.SetActive(false);
+                    Collected.Inventory.Add(gameObject.name);
+                    MainTaskDisplay.color = Color.gray;
+                    MainTaskDisplay.fontStyle = FontStyles.Strikethrough;
+                }
+
+                TaskManager.Quest1.Add(gameObject.name);
+            }
         }
 
         if (Task2 == true)
         {
-            TaskManager.Quest2.Add(gameObject.name);
+            if (TaskManager.ActivatedTask2 == true)
+            {
+                if (Collected.Found)
+                {
+                    gameObject.SetActive(false);
+                    Collected.Inventory.Add(gameObject.name);
+                    MainTaskDisplay.color = Color.gray;
+                    MainTaskDisplay.fontStyle = FontStyles.Strikethrough;
+                }
+
+                TaskManager.Quest2.Add(gameObject.name);
+            }
         }
 
         if (Task3 == true)
         {
-            TaskManager.Quest3.Add(gameObject.name);
+            if (TaskManager.ActivatedTask3 == true)
+            {
+                if (Collected.Found)
+                {
+                    gameObject.SetActive(false);
+                    Collected.Inventory.Add(gameObject.name);
+                    MainTaskDisplay.color = Color.gray;
+                    MainTaskDisplay.fontStyle = FontStyles.Strikethrough;
+                }
+
+                TaskManager.Quest3.Add(gameObject.name);
+            }
         }
 
         if (Task4 == true)
         {
-            TaskManager.Quest4.Add(gameObject.name);
+            if (TaskManager.ActivatedTask4 == true)
+            {
+                if (Collected.Found)
+                {
+                    gameObject.SetActive(false);
+                    Collected.Inventory.Add(gameObject.name);
+                    MainTaskDisplay.color = Color.gray;
+                    MainTaskDisplay.fontStyle = FontStyles.Strikethrough;
+                }
+
+                TaskManager.Quest4.Add(gameObject.name);
+            }
         }
 
         if (Task5 == true)
         {
-            TaskManager.Quest5.Add(gameObject.name);
+            if (TaskManager.ActivatedTask5 == true)
+            {
+                if (Collected.Found)
+                {
+                    gameObject.SetActive(false);
+                    Collected.Inventory.Add(gameObject.name);
+                    MainTaskDisplay.color = Color.gray;
+                    MainTaskDisplay.fontStyle = FontStyles.Strikethrough;
+                }
+
+                TaskManager.Quest5.Add(gameObject.name);
+            }
         }
     }
 }
