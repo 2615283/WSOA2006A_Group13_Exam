@@ -11,6 +11,7 @@ public class TaskManager : MonoBehaviour
     [Header("Task 1:")]
     public bool ActivatedTask1 = false;
     public List<string> Quest1;
+    public bool CompleteTask1 = false;
 
     [Header("Task 2:")]
     public bool ActivatedTask2 = false;

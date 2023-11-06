@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +16,9 @@ public class UIManager : MonoBehaviour
 
     public PlayerCollection NPCCheck;
     public GameObject PlayerScript;
+
+    [Header("Checks:")]
+    public bool Talked = false;
 
 
     void Start()
@@ -60,6 +64,7 @@ public class UIManager : MonoBehaviour
             if (NPCCheck.NPCNear)
             {
                 DialogueScreen.SetActive(true);
+                Talked = true;
             }
         }
 
@@ -88,5 +93,11 @@ public class UIManager : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void FinishDialogue()
+    {
+        DialogueScreen.SetActive(false);
+        Talked = false;
     }
 }
