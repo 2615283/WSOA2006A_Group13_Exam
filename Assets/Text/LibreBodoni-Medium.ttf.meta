@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: d3f8b89162c8f7c4da89b5b979538200
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Libre Bodoni
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7042b21b20d390147a2cfa7757613d05, type: 3}
+  - {fileID: 12800000, guid: 3100c8738ba0f9c42a00928aa5d5e2e1, type: 3}
+  - {fileID: 12800000, guid: 80d8bd3a81d3898419da2edfde363df5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

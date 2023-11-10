@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35e256f79330b84e9d2aef8ce692ffe, type: 3}
+  m_Name: Hair 6
+  m_EditorClassIdentifier: 
+  partName: Black Hair 7
+  partID: 6
+  partAnimations:
+  - {fileID: 7400000, guid: 64e91d8da1fa4bf4e8942e358dc279a4, type: 2}
+  - {fileID: 7400000, guid: 4353e1e3a0e920a4891f65bf6cdf18df, type: 2}
+  - {fileID: 7400000, guid: 0a4e134df29b32f43a96d0525b62a2ba, type: 2}
+  - {fileID: 7400000, guid: 1e7e9af2bd4f0c246adabe64679d0dfa, type: 2}
+  - {fileID: 7400000, guid: 6cee59da1b65d2a44a03f0b43f45765a, type: 2}
+  - {fileID: 7400000, guid: 3db507340e0de6749a3c189227023e0b, type: 2}
+  - {fileID: 7400000, guid: b2f3afcf613422c438715162e75bddbc, type: 2}
+  - {fileID: 7400000, guid: b82e7fb9aad579c4da1f43592d85db45, type: 2}

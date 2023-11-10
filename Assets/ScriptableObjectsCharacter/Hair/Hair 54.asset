@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35e256f79330b84e9d2aef8ce692ffe, type: 3}
+  m_Name: Hair 54
+  m_EditorClassIdentifier: 
+  partName: Purple Hair 7
+  partID: 54
+  partAnimations:
+  - {fileID: 7400000, guid: d5e89e2f5fdd13e40a55c7d5bd01f18c, type: 2}
+  - {fileID: 7400000, guid: 906e957f579dc2a4fa5441e8f042a5d3, type: 2}
+  - {fileID: 7400000, guid: 53de43bd96e0c1041ab8ab8c53a92f1f, type: 2}
+  - {fileID: 7400000, guid: 2290c41ec0b761c40aa84c378e0194b9, type: 2}
+  - {fileID: 7400000, guid: 60c279575aff74146833c1a380247700, type: 2}
+  - {fileID: 7400000, guid: 4e3132a675b0452458607bfd25d63077, type: 2}
+  - {fileID: 7400000, guid: 9f2b9ea792bc62449b259a8f37678502, type: 2}
+  - {fileID: 7400000, guid: bf92353879a1564448eeaa3a1406f2eb, type: 2}

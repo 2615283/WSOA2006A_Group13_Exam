@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35e256f79330b84e9d2aef8ce692ffe, type: 3}
+  m_Name: Hair 63
+  m_EditorClassIdentifier: 
+  partName: Red Hair 8
+  partID: 63
+  partAnimations:
+  - {fileID: 7400000, guid: e5aee047800c55344b1c0c0deb7cc2f4, type: 2}
+  - {fileID: 7400000, guid: 62e77fdc5a00b094d9684f418fc5c530, type: 2}
+  - {fileID: 7400000, guid: 4f5102f1950cbb64faf50723b0f4d1a3, type: 2}
+  - {fileID: 7400000, guid: 6287bcee0de36704dae1aeadbd7be61e, type: 2}
+  - {fileID: 7400000, guid: 5197cb3ca06ebf441bcd56d890b75ae4, type: 2}
+  - {fileID: 7400000, guid: 956abf226f421b34083bce087937a32d, type: 2}
+  - {fileID: 7400000, guid: e50bcc1a91cf87b4389185834b757b8c, type: 2}
+  - {fileID: 7400000, guid: e06134c0223d6ad40a233c3822bcc852, type: 2}

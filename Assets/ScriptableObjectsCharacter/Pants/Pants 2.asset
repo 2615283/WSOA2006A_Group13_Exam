@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35e256f79330b84e9d2aef8ce692ffe, type: 3}
+  m_Name: Pants 2
+  m_EditorClassIdentifier: 
+  partName: Blue Pants
+  partID: 2
+  partAnimations:
+  - {fileID: 7400000, guid: a386722047d0ce24ab31617eee1ab02b, type: 2}
+  - {fileID: 7400000, guid: 21e70f524806c3741954b1b02cd3f781, type: 2}
+  - {fileID: 7400000, guid: abf4e0a43dafd6743ac0961cbbb4fb36, type: 2}
+  - {fileID: 7400000, guid: aa29090738bf9a344aad1d3dce9cd71f, type: 2}
+  - {fileID: 7400000, guid: af7c73c5004d8874cb413781449900f3, type: 2}
+  - {fileID: 7400000, guid: 00c5969fd7c7a3644842f5b15172f8a6, type: 2}
+  - {fileID: 7400000, guid: 00f40acce090e7d409298ebaa10a60cc, type: 2}
+  - {fileID: 7400000, guid: 1a8ec5a4896368c41b2fe5a1a0f3919c, type: 2}

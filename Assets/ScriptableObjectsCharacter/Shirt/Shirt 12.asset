@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35e256f79330b84e9d2aef8ce692ffe, type: 3}
+  m_Name: Shirt 12
+  m_EditorClassIdentifier: 
+  partName: Pink Long Collar Shirt
+  partID: 12
+  partAnimations:
+  - {fileID: 7400000, guid: 333d7dc4b5a24d64185cb1a06af4d10e, type: 2}
+  - {fileID: 7400000, guid: b711b8f7f2d19d14ebb49cc509b037a2, type: 2}
+  - {fileID: 7400000, guid: f119e3c59b4ef0647b7034188e95f3a9, type: 2}
+  - {fileID: 7400000, guid: ffdec7e9af6624e44bd1865b3cc0ad83, type: 2}
+  - {fileID: 7400000, guid: 2f42334a3f6eb524f99b73ffd7745ac3, type: 2}
+  - {fileID: 7400000, guid: 0895b55ba73f71c40a6c6ae02436cdb2, type: 2}
+  - {fileID: 7400000, guid: 5cf24e6744a97d643b93ab41ff93396e, type: 2}
+  - {fileID: 7400000, guid: 9e6c41b00f9c5914da506ca0587d8122, type: 2}

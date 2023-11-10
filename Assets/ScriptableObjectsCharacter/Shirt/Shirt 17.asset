@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35e256f79330b84e9d2aef8ce692ffe, type: 3}
+  m_Name: Shirt 17
+  m_EditorClassIdentifier: 
+  partName: Purple Long Shirt
+  partID: 17
+  partAnimations:
+  - {fileID: 7400000, guid: c1f8aec87cf7b7747b4ea319263c6b51, type: 2}
+  - {fileID: 7400000, guid: 50e2e8dfdb8dfb747935546c1d5e20d3, type: 2}
+  - {fileID: 7400000, guid: 4e2175886c0ee8f43b0d1fd5eadef909, type: 2}
+  - {fileID: 7400000, guid: 7e16c415bf98d174e9d25303b5759e57, type: 2}
+  - {fileID: 7400000, guid: f6dfe5f844bb90643a361315cd89844a, type: 2}
+  - {fileID: 7400000, guid: be3edf5e3437c1f42bf8c8f5d130a6e3, type: 2}
+  - {fileID: 7400000, guid: bd0cd1d0e0f418742aa3258b500771ae, type: 2}
+  - {fileID: 7400000, guid: a324a48ec1bcd5b45a17c0da6e9c9447, type: 2}

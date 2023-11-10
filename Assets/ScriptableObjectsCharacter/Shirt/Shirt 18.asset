@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35e256f79330b84e9d2aef8ce692ffe, type: 3}
+  m_Name: Shirt 18
+  m_EditorClassIdentifier: 
+  partName: Purple Short Collar Shirt
+  partID: 18
+  partAnimations:
+  - {fileID: 7400000, guid: 60bb1ba0d1e03fa49a86a29d00130b8a, type: 2}
+  - {fileID: 7400000, guid: 61419f4d2e90b6b49a62a8f367faa928, type: 2}
+  - {fileID: 7400000, guid: 2578e1a27be9c4a4f9fb3e0ef2018851, type: 2}
+  - {fileID: 7400000, guid: 16d7b61055984014898e01fe811c53f9, type: 2}
+  - {fileID: 7400000, guid: 1146215c205e2ec4296ac7ebd5ec2521, type: 2}
+  - {fileID: 7400000, guid: d19b03acee6b95642b9e164d40e31889, type: 2}
+  - {fileID: 7400000, guid: 8a7b1ff300d8e034fa68275191628ba0, type: 2}
+  - {fileID: 7400000, guid: bab89dba54a2a724e965ea46a77c2976, type: 2}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35e256f79330b84e9d2aef8ce692ffe, type: 3}
+  m_Name: Shirt 13
+  m_EditorClassIdentifier: 
+  partName: Pink Long Shirt
+  partID: 13
+  partAnimations:
+  - {fileID: 7400000, guid: 7241a84b5a5a70749b546964b03b1546, type: 2}
+  - {fileID: 7400000, guid: 9f81abc5b3e125a49944c51acfa606ff, type: 2}
+  - {fileID: 7400000, guid: c5d84a25f13442844ab847b86f6def7a, type: 2}
+  - {fileID: 7400000, guid: 7eabf7761df822d458c1de4e45c6817d, type: 2}
+  - {fileID: 7400000, guid: 6815a2a31c047344fad26f63b2f565d8, type: 2}
+  - {fileID: 7400000, guid: 468e4d6588495bf4fb9349b183a7a0ec, type: 2}
+  - {fileID: 7400000, guid: 56f1f95a3a9881443873685d2261f5ef, type: 2}
+  - {fileID: 7400000, guid: 02ebe84963dae8d40be34dc4fdae4858, type: 2}
