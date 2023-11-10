@@ -38,10 +38,10 @@ public class UIManager : MonoBehaviour
         }
 
         //opens Task Screen
-        /*if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T))
         {
             TaskScreen.SetActive(true);
-        }*/
+        }
 
         //opens Inventory Screen
         if (Input.GetKeyDown(KeyCode.E))
@@ -49,14 +49,14 @@ public class UIManager : MonoBehaviour
             InventoryScreen.SetActive(true);
         }
 
-        //opens the Trade Screen if NPC is nearby
+        /*//opens the Trade Screen if NPC is nearby
         if (Input.GetKeyDown(KeyCode.R))
         {
             if (NPCCheck.NPCNear)
             {
                 TradeScreen.SetActive(true);
             }
-        }
+        }*/
 
         //starts dialogue scene with NPC - possibly going to change
         if (Input.GetKeyDown(KeyCode.Q))
