@@ -71,6 +71,7 @@ public class PlayerCollection : MonoBehaviour
             TutorialItem1.SetActive(true);
             TutorialItem2.SetActive(true);
             TutorialItem3.SetActive(true);
+            ActivateTask.Description.text = "Tutorial: Find the items and give them to the boy.";
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTutorialTask == true)
@@ -84,6 +85,7 @@ public class PlayerCollection : MonoBehaviour
         {
             ActivateTask.ActivatedTask1 = true;
             Quest1Item1.SetActive(true);
+            ActivateTask.Description.text = "Quest1: Take the package to the hospital";
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask1 == true)
@@ -96,6 +98,7 @@ public class PlayerCollection : MonoBehaviour
         if (CheckInteraction.Talked == true && NPCQuest11 == true)
         {
             ActivateTask.ActivatedTask1 = true;
+            ActivateTask.Description.text = "Quest1 Part2: Take the letter to Baba Jonah";
             Quest1Item2.SetActive(true);
         }
         //sets NPCQuest check as false once task is active
@@ -109,6 +112,7 @@ public class PlayerCollection : MonoBehaviour
         if (CheckInteraction.Talked == true && NPCQuest2 == true)
         {
             ActivateTask.ActivatedTask2 = true;
+            ActivateTask.Description.text = "Quest2: Find the beehive";
             Quest2Item1.SetActive(true);
         }
         //sets NPCQuest check as false once task is active
@@ -125,6 +129,7 @@ public class PlayerCollection : MonoBehaviour
             Quest3Item1.SetActive(true);
             Quest3Item2.SetActive(true);
             Quest3Item3.SetActive(true);
+            ActivateTask.Description.text = "Quest3: Find the ingredients for the herbalist.";
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask3 == true)
@@ -140,6 +145,7 @@ public class PlayerCollection : MonoBehaviour
             Quest4Item1.SetActive(true);
             Quest4Item2.SetActive(true);
             Quest4Item3.SetActive(true);
+            ActivateTask.Description.text = "Quest4: Find a fish and ingredients.";
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask4 == true)
@@ -149,9 +155,10 @@ public class PlayerCollection : MonoBehaviour
 
         //Quest 5
         //Checks if the correct NPC has been talked to and activates the task
-        if (CheckInteraction.Talked == true && NPCQuest5 == true)
+        if (CheckInteraction.Talked == true && ActivateTask.CompleteTask4 == true)
         {
             ActivateTask.ActivatedTask5 = true;
+            ActivateTask.Description.text = "Quest5: Find the herbalist.";
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask5 == true)

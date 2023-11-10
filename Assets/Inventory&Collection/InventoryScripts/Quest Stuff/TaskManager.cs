@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TaskManager : MonoBehaviour
@@ -7,6 +8,9 @@ public class TaskManager : MonoBehaviour
     [Header("Player:")]
     public PlayerCollection Player;
     public GameObject PlayerManager;
+
+    [Header("Task Descriptions")]
+    public TMP_Text Description;
 
     [Header("Tutorial Task")]
     public bool ActivatedTutorialTask = false;
@@ -57,6 +61,7 @@ public class TaskManager : MonoBehaviour
     private void Start()
     {
         Player = PlayerManager.GetComponent<PlayerCollection>();
+        Description.text = "Tutorial: Find the little boy";
     }
     private void Update()
     {
@@ -66,6 +71,7 @@ public class TaskManager : MonoBehaviour
         {
             CompleteTutorialTask = true;
             RewardTutorial.SetActive(false); //removes the barrier
+            Description.text = "Tutorial Complete: Find the way to the village.";
             Player.Inventory.RemoveAll(x => TutorialQuest.Contains(x));
             TutorialQuest.Clear();
         }
@@ -74,11 +80,13 @@ public class TaskManager : MonoBehaviour
         if (Quest1.Count == 1)
         {
             CompleteTask1 = true;
+            Description.text = "Quest1 Part1 Complete: Return to Mama Joji";
             Quest1.Clear();
         }
         if (Quest11.Count == 1)
         {
             CompleteTask11 = true;
+            Description.text = "Quest1 Part2 Complete: Return to Mama Joji";
             Quest11.Clear();
         }
         if (Quest12.Count == 1)
@@ -92,6 +100,7 @@ public class TaskManager : MonoBehaviour
         if (Quest2.Count == 1)
         {
             CompleteTask2 = true;
+            Description.text = "Quest2 Complete: Return to Mama Joji";
             Player.Inventory.Add(RewardQuest2.name);
             Quest2.Clear(); 
         }
@@ -100,6 +109,7 @@ public class TaskManager : MonoBehaviour
         if (Quest3.Count == 3)
         {
             CompleteTask3 = true;
+            Description.text = "Quest3 Complete: Return to herbalist";
             Player.Inventory.Add(RewardQuest3.name);
             Quest3.Clear();
         }
@@ -109,6 +119,7 @@ public class TaskManager : MonoBehaviour
         {
             CompleteTask4 = true;
             Player.Inventory.Add(RewardQuest4.name);
+            Description.text = "Quest4 Complete: Return to the Hungry Villiager.";
             Quest4.Clear();
         }
 
@@ -117,6 +128,7 @@ public class TaskManager : MonoBehaviour
         {
             CompleteTask5 = true;
             Player.Inventory.Add(RewardQuest5.name);
+            Description.text = "Quest5 Complete: Go to your friend's house.";
             Quest5.Clear();
         }
 
