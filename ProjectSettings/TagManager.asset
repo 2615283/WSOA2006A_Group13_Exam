@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Collectible
   - NPC
-  - RewardItem
   layers:
   - Default
   - TransparentFX
@@ -14,7 +13,7 @@ TagManager:
   - Player
   - Water
   - UI
-  - Minimap
+  - 
   - 
   - 
   - 
