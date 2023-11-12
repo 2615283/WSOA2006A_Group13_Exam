@@ -65,24 +65,32 @@ public class TaskManager : MonoBehaviour
     }
     private void Update()
     {
+        //error here
+
+
         //gives the reward to player if all the necessary items are collected
         //Tutroial Quest
-        if (TutorialQuest.Count == 3)
+        if (TutorialQuest.Count == 3 && !CompleteTutorialTask)
         {
             CompleteTutorialTask = true;
             RewardTutorial.SetActive(false); //removes the barrier
             Description.text = "Tutorial Complete: Find the way to the village.";
             Player.Inventory.RemoveAll(x => TutorialQuest.Contains(x));
             TutorialQuest.Clear();
+
+            // Trigger Task 1 completion event
+            DialogueEventManager.Task1CompletedEvent.Invoke();
         }
 
         //Quest 1
-        if (Quest1.Count == 1)
+        if (Quest1.Count == 1 && !CompleteTask1)
         {
             CompleteTask1 = true;
             Description.text = "Quest1 Part1 Complete: Return to Mama Joji";
             Quest1.Clear();
+
         }
+
         if (Quest11.Count == 1)
         {
             CompleteTask11 = true;
@@ -133,4 +141,8 @@ public class TaskManager : MonoBehaviour
         }
 
     }
+
+    //fill a function for other tasks
+
+    
 }
