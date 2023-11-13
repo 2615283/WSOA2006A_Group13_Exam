@@ -194,7 +194,7 @@ public class PlayerCollection : MonoBehaviour
         {
             NPCQuest11 = true;
         }
-        if (collision.gameObject.name == "NPC2")
+        if (collision.gameObject.name == "NPC1" && ActivateTask.CompleteTask11 == true)
         {
             NPCQuest2 = true;
         }
