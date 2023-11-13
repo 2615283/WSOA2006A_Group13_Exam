@@ -69,6 +69,11 @@ public class TaskManager : MonoBehaviour
     }
     private void Update()
     {
+        if (Player.TutorialCompleteMessage == true)
+        {
+           Description.text = "Tutorial: Find the items and give them to the boy.";
+        }
+
         //gives the reward to player if all the necessary items are collected
         //Tutroial Quest
         if (TutorialQuest.Count == 3)
@@ -85,6 +90,10 @@ public class TaskManager : MonoBehaviour
         }
 
         //Quest 1
+        if (Player.StartQuest1Message == true)
+        {
+            Description.text = "Quest1: Take the package to the hospital";
+        }
         if (UIChecks.DeliveredPackage == true)
         {
             CompleteTask1 = true;
@@ -92,6 +101,11 @@ public class TaskManager : MonoBehaviour
             Description.text = "Quest1 Part1 Complete: Return to Mama Joji";
             Player.Inventory.RemoveAll(x => Quest1.Contains(x));
             Quest1.Clear();
+        }
+
+        if (Player.StartQuest1Part2Message == true)
+        {
+            Description.text = "Quest1 Part2: Take the letter to Baba Jonah";
         }
         if (Player.NPC2Talk == true)
         {
@@ -104,6 +118,10 @@ public class TaskManager : MonoBehaviour
         }
          
         //Quest2
+        if (Player.StartQuest2Message == true)
+        {
+            Description.text = "Quest2: Find the beehive";
+        }
         if (Quest2.Count == 1)
         {
             Description.text = "Quest2 Complete: Return to Mama Joji";
@@ -120,6 +138,10 @@ public class TaskManager : MonoBehaviour
         }
 
         //Quest3
+        if (Player.StartQuest3Message == true)
+        {
+            Description.text = "Quest3: Find the ingredients for the herbalist.";
+        }
         if (Quest3.Count == 3)
         {
             Description.text = "Quest3 Complete: Return to herbalist";
@@ -134,6 +156,10 @@ public class TaskManager : MonoBehaviour
         }
 
         //Quest4
+        if (Player.StartQuest4Message == true)
+        {
+            Description.text = "Quest4: Find a fish and ingredients.";
+        }
         if (Quest4.Count == 3)
         {
             Description.text = "Quest4 Complete: Return to the Hungry Villiager.";
@@ -147,6 +173,10 @@ public class TaskManager : MonoBehaviour
         }
 
         //Quest5
+        if (Player.StartQuest5Message == true)
+        {
+            Description.text = "Quest5: Talk to the herbalist.";
+        }
         if (Quest5.Count == 0 && ActivatedTask5 == true)
         {
             if (UIChecks.Talked == true)

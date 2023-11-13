@@ -72,6 +72,10 @@ public class PlayerCollection : MonoBehaviour
     public GameObject Quest4Item2;
     public GameObject Quest4Item3;
 
+    [Header("Dialogue")]
+    public DialogueManager Dialogue;
+    public GameObject DialoguePanel;
+
     [Header("Controllers")]
     public GameObject VillageEntrance;
     public GameObject HospitalQuest;
@@ -79,10 +83,22 @@ public class PlayerCollection : MonoBehaviour
     public GameObject Fire;
     public bool StartFire = false;
 
+    [Header("Quest List Controllers:")]
+    public bool TutorialCompleteMessage = false;
+    public bool StartQuest1Message = false;
+    public bool StartQuest1Part2Message = false;
+    public bool StartQuest2Message = false;
+    public bool StartQuest3Message = false;
+    public bool StartQuest4Message = false;
+    public bool StartQuest5Message = false;
+
     void Start()
     {
         Inventory = new List<string>();
         Inventory.Add("Glasses");
+
+        Dialogue = FindObjectOfType<DialogueManager>();
+        DialoguePanel = Dialogue.dialoguePanel;
     }
 
     void Update()
@@ -98,12 +114,19 @@ public class PlayerCollection : MonoBehaviour
             TutorialItem1.SetActive(true);
             TutorialItem2.SetActive(true);
             TutorialItem3.SetActive(true);
-            ActivateTask.Description.text = "Tutorial: Find the items and give them to the boy.";
+
+            TutorialCompleteMessage = true;
+
+            //Dialogue
+            DialoguePanel.SetActive(true);
+            Dialogue.StartDialogue();
+
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTutorialTask == true)
         {
             NPCTutorialQuest = false;
+            TutorialCompleteMessage = false;
         }
 
         //Quest 1.1
@@ -112,12 +135,15 @@ public class PlayerCollection : MonoBehaviour
         {
             ActivateTask.ActivatedTask1 = true;
             Quest1Item1.SetActive(true);
-            ActivateTask.Description.text = "Quest1: Take the package to the hospital";
+
+            StartQuest1Message = true;
+            
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask1 == true)
         {
             NPCQuest1 = false;
+            StartQuest1Message = false;
         }
 
         //Quest 1.2
@@ -125,13 +151,15 @@ public class PlayerCollection : MonoBehaviour
         if (CheckInteraction.Talked == true && NPCQuest11 == true)
         {
             ActivateTask.ActivatedTask11 = true;
-            ActivateTask.Description.text = "Quest1 Part2: Take the letter to Baba Jonah";
+            
+            StartQuest1Part2Message = true;
             Quest1Item2.SetActive(true);
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask11 == true)
         {
             NPCQuest11 = false;
+            StartQuest1Part2Message = false;
         }
 
         //Quest 2
@@ -139,13 +167,15 @@ public class PlayerCollection : MonoBehaviour
         if (CheckInteraction.Talked == true && NPCQuest2 == true)
         {
             ActivateTask.ActivatedTask2 = true;
-            ActivateTask.Description.text = "Quest2: Find the beehive";
+            StartQuest2Message = true;
+            
             Quest2Item1.SetActive(true);
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask2 == true)
         {
             NPCQuest2 = false;
+            StartQuest2Message = false;
         }
 
         //Quest 3
@@ -156,12 +186,14 @@ public class PlayerCollection : MonoBehaviour
             Quest3Item1.SetActive(true);
             Quest3Item2.SetActive(true);
             Quest3Item3.SetActive(true);
-            ActivateTask.Description.text = "Quest3: Find the ingredients for the herbalist.";
+            
+            StartQuest3Message = true;
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask3 == true)
         {
             NPCQuest3 = false;
+            StartQuest3Message = false;
         }
 
         //Quest 4
@@ -172,12 +204,14 @@ public class PlayerCollection : MonoBehaviour
             Quest4Item1.SetActive(true);
             Quest4Item2.SetActive(true);
             Quest4Item3.SetActive(true);
-            ActivateTask.Description.text = "Quest4: Find a fish and ingredients.";
+            
+            StartQuest4Message = true;
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask4 == true)
         {
             NPCQuest4 = false;
+            StartQuest4Message = false;
         }
 
         //Quest 5
@@ -185,12 +219,14 @@ public class PlayerCollection : MonoBehaviour
         if (CheckInteraction.Talked == true && NPCQuest5 == true)
         {
             ActivateTask.ActivatedTask5 = true;
-            ActivateTask.Description.text = "Quest5: Talk to the herbalist.";
+            
+            StartQuest5Message = true;
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask5 == true)
         {
             NPCQuest5 = false;
+            StartQuest5Message = false;
         }
     }
 
@@ -215,12 +251,14 @@ public class PlayerCollection : MonoBehaviour
             TutorialNPC = true;
             TutorialQuestList.SetActive(true);
         }
+
         if (collision.gameObject.name == "NPC1")
         {
             NPCQuest1 = true;
             NPC1 = true;
             Quest1List1.SetActive(true);
         }
+
         if (collision.gameObject.name == "NPC1" && ActivateTask.CompleteTask1 == true)
         {
             NPCQuest11 = true;
@@ -233,7 +271,7 @@ public class PlayerCollection : MonoBehaviour
             NPC1 = true;
             Quest2List.SetActive(true);
         }
-        if (collision.gameObject.name == "NPC2" && ActivateTask.Quest11.Count == 1 && CheckInteraction.Talked == true)
+        if (collision.gameObject.name == "NPC2" && ActivateTask.Quest11.Count >= 1 && CheckInteraction.Talked == true)
         {
             NPC2Talk = true;
             NPC2 = true;
