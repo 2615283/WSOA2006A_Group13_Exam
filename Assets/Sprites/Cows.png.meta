@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc06e59a0d5dc4e4c9ae6de91eaf7a7a
-      internalID: -1304027039
+      spriteID: d35fdf2a2b1874345914b926fa08f752
+      internalID: -109838755
       vertices: []
       indices: 
       edges: []
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c60199b24a839e4b9ceac33d66efe22
-      internalID: 1385801514
+      spriteID: 9902eff610c0a7844bb3cb3ea09c81f4
+      internalID: 449207242
       vertices: []
       indices: 
       edges: []
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 904f86399ac25834582ee3b69cfe1c45
-      internalID: 42684252
+      spriteID: 6fc2314ad25d3874d8e8df3055d311e3
+      internalID: 1958551207
       vertices: []
       indices: 
       edges: []
@@ -176,8 +176,8 @@ TextureImporter:
       name: Cows_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
+        x: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75484ff2ab668114388ba4645e2f4ff3
-      internalID: 58980707
+      spriteID: 162b6486f037d8a4e90be866d51d03b1
+      internalID: -2060922807
       vertices: []
       indices: 
       edges: []
@@ -197,7 +197,7 @@ TextureImporter:
       name: Cows_4
       rect:
         serializedVersion: 2
-        x: 0
+        x: 32
         y: 64
         width: 32
         height: 32
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59103799a32debd41b10641b396cd13d
-      internalID: -715559659
+      spriteID: 37b2a5e6c787ac4409a2f30159cff148
+      internalID: -786901466
       vertices: []
       indices: 
       edges: []
@@ -218,7 +218,7 @@ TextureImporter:
       name: Cows_5
       rect:
         serializedVersion: 2
-        x: 32
+        x: 64
         y: 64
         width: 32
         height: 32
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4b09b91c2a7d0a45b7dc903c5436368
-      internalID: 875788967
+      spriteID: 860f90c8cde9952498dc3041acdc4005
+      internalID: 667105507
       vertices: []
       indices: 
       edges: []
@@ -239,8 +239,8 @@ TextureImporter:
       name: Cows_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 0
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c7d20a5aa167594ca8bdc638a93e897
-      internalID: 70939151
+      spriteID: 669f8eede44ae924cb9fe548eea57efb
+      internalID: 116102722
       vertices: []
       indices: 
       edges: []
@@ -260,8 +260,8 @@ TextureImporter:
       name: Cows_7
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
+        x: 32
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71ecdcef06a70e144986383e4d1783ca
-      internalID: 1006261195
+      spriteID: de4746260f25658449efa5c1ccd999b2
+      internalID: -226225103
       vertices: []
       indices: 
       edges: []
@@ -281,7 +281,7 @@ TextureImporter:
       name: Cows_8
       rect:
         serializedVersion: 2
-        x: 0
+        x: 64
         y: 32
         width: 32
         height: 32
@@ -292,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f54e56f81e5528d4c819f155ebbe16d3
-      internalID: -1438008976
+      spriteID: 05e5b17369dc3894bab7faf98d57f4bf
+      internalID: 1250657401
       vertices: []
       indices: 
       edges: []
@@ -302,69 +302,6 @@ TextureImporter:
       name: Cows_9
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53861d4de5917154ba5792148da234a6
-      internalID: -453744080
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cows_10
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6edd59fa9e5107d4299211c971f47560
-      internalID: -182777758
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cows_11
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f81a7cc2672060442b1843b57ef11df9
-      internalID: 501878336
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cows_12
-      rect:
-        serializedVersion: 2
         x: 0
         y: 0
         width: 32
@@ -376,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa3f7c9f0dc010e48984dbed94cbc70f
-      internalID: -805120669
+      spriteID: c8c3e7b03a78f8340964967f03982c4b
+      internalID: 885692919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cows_13
+      name: Cows_10
       rect:
         serializedVersion: 2
         x: 32
@@ -397,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 870b69e5c33bdcd45b34c0ca3a36bd96
-      internalID: -2101368114
+      spriteID: d0490ba310d4ce54b8614c32b99983ce
+      internalID: 1994754492
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cows_14
+      name: Cows_11
       rect:
         serializedVersion: 2
         x: 64
@@ -418,29 +355,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e75681e859e03643b0690c45b2e9a98
-      internalID: 739813654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cows_15
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c26778bcd33cd9d41b4b5d667691e6df
-      internalID: -477571477
+      spriteID: 8d357c859c940e54481a5055ff916b68
+      internalID: 2107936858
       vertices: []
       indices: 
       edges: []
@@ -456,22 +372,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cows_0: -1304027039
-      Cows_1: 1385801514
-      Cows_10: -182777758
-      Cows_11: 501878336
-      Cows_12: -805120669
-      Cows_13: -2101368114
-      Cows_14: 739813654
-      Cows_15: -477571477
-      Cows_2: 42684252
-      Cows_3: 58980707
-      Cows_4: -715559659
-      Cows_5: 875788967
-      Cows_6: 70939151
-      Cows_7: 1006261195
-      Cows_8: -1438008976
-      Cows_9: -453744080
+      Cows_0: -109838755
+      Cows_1: 449207242
+      Cows_10: 1994754492
+      Cows_11: 2107936858
+      Cows_2: 1958551207
+      Cows_3: -2060922807
+      Cows_4: -786901466
+      Cows_5: 667105507
+      Cows_6: 116102722
+      Cows_7: -226225103
+      Cows_8: 1250657401
+      Cows_9: 885692919
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

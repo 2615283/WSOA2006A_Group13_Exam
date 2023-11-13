@@ -86,6 +86,10 @@ public class TaskManager : MonoBehaviour
                 Description.text = "Tutorial Complete: Find the way to the village.";
                 Player.Inventory.RemoveAll(x => TutorialQuest.Contains(x));
                 TutorialQuest.Clear();
+
+                //Dialogue
+                Player.DialoguePanel.SetActive(true);
+                Player.Dialogue.OnTask1Completed();
             }
         }
 
@@ -107,6 +111,7 @@ public class TaskManager : MonoBehaviour
         {
             Description.text = "Quest1 Part2: Take the letter to Baba Jonah";
         }
+
         if (Player.NPC2Talk == true)
         {
             CompleteTask11 = true;
@@ -115,6 +120,7 @@ public class TaskManager : MonoBehaviour
             Player.Inventory.Add(RewardQuest1.name);
             RewardTutorial3.SetActive(false);
             Quest11.Clear();
+            Player.NPC2Talk = false;
         }
          
         //Quest2
@@ -134,6 +140,10 @@ public class TaskManager : MonoBehaviour
                 Player.Inventory.RemoveAll(x => Quest2.Contains(x));
                 Player.Inventory.Add(RewardQuest2.name);
                 Quest2.Clear();
+
+                //Dialogue
+                Player.DialoguePanel.SetActive(true);
+                Player.Dialogue.TaskHoneyProcess();
             }
         }
 
@@ -152,6 +162,10 @@ public class TaskManager : MonoBehaviour
                 Player.Inventory.RemoveAll(x => Quest3.Contains(x));
                 Player.Inventory.Add(RewardQuest3.name);
                 Quest3.Clear();
+
+                //Dialogue
+                Player.DialoguePanel.SetActive(true);
+                Player.Dialogue.Task5Return();
             }
         }
 
@@ -169,6 +183,10 @@ public class TaskManager : MonoBehaviour
                 Player.Inventory.Add(RewardQuest4.name);  
                 Player.Inventory.RemoveAll(x => Quest4.Contains(x));
                 Quest4.Clear();
+
+                //Dialogue
+                Player.DialoguePanel.SetActive(true);
+                Player.Dialogue.Task6Complete();
             }
         }
 
@@ -186,6 +204,11 @@ public class TaskManager : MonoBehaviour
                 Description.text = "Quest5 Complete: Go to your friend's house.";
                 Quest5.Clear();
                 RewardTutorial5.SetActive(false);
+
+                //Dialogue
+                Player.DialoguePanel.SetActive(true);
+                Player.Dialogue.Task7Mixing();
+
                 ActivatedTask5 = false;
             }
             
