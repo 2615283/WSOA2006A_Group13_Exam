@@ -156,6 +156,7 @@ public class TaskManager : MonoBehaviour
                 Description.text = "Quest5 Complete: Go to your friend's house.";
                 Quest5.Clear();
                 RewardTutorial5.SetActive(false);
+                ActivatedTask5 = false;
             }
             
         }

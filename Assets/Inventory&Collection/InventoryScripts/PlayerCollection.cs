@@ -182,7 +182,7 @@ public class PlayerCollection : MonoBehaviour
 
         //Quest 5
         //Checks if the correct NPC has been talked to and activates the task
-        if (CheckInteraction.Talked == true && ActivateTask.CompleteTask4 == true)
+        if (CheckInteraction.Talked == true && NPCQuest5 == true)
         {
             ActivateTask.ActivatedTask5 = true;
             ActivateTask.Description.text = "Quest5: Talk to the herbalist.";
