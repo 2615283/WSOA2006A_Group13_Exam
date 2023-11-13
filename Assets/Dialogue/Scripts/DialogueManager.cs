@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public Text nameText;
-    public Text dialogueText;
+    public TMP_Text nameText;
+    public TMP_Text dialogueText;
     public GameObject dialoguePanel;
 
     public GameObject letterPanel;
+
+    public UIManager Checks;
+    public GameObject UIManagers;
 
     [System.Serializable]
     public class Dialogue
@@ -28,11 +32,11 @@ public class DialogueManager : MonoBehaviour
         // Subscribe to events
         DialogueEventManager.Task1CompletedEvent.AddListener(OnTask1Completed);
 
-
+        Checks = UIManagers.GetComponent<UIManager>();
     }
 
     //meets the boy
-    public void StartDialogue() //Activates Quest1
+    public void StartDialogue() //Activates Tutorial
     {
         dialogueQueue.Clear();
 
@@ -101,19 +105,19 @@ public class DialogueManager : MonoBehaviour
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Susan", dialogueText = "Mama Joji sent me." });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Baba Jonah", dialogueText = "Ah, Mama Joji, she has a heart as beautiful as the rarest flower. I've always admired her from a distance." });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Susan", dialogueText = "She did say you have the most interesting hair on this side of town." });
-        dialogueQueue.Enqueue(new Dialogue { speakerName = "Baba Jonah", dialogueText = "Interesting, you say?" });
-
+        dialogueQueue.Enqueue(new Dialogue { speakerName = "Baba Jonah", dialogueText = "Interesting, you say? *takes letter*" });
+        /*
         // Display the letter reading panel
         DisplayLetterPanel();
-
+        */
         // Continue the dialogue after reading the letter
-        dialogueQueue.Enqueue(new Dialogue { speakerName = "Baba Jonah", dialogueText = "Oh, Joji!!" });
+        dialogueQueue.Enqueue(new Dialogue { speakerName = "Baba Jonah", dialogueText = "Oh, Joji!! *reads letter out loud*" });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Mama Joji", dialogueText = "Dear Jonah, I find myself lost in our village's beauty, tangled in the unsaid words between us." });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Mama Joji", dialogueText = "Like the herbs we nurture, our emotions weave deep roots within our hearts. I write not just as a herbalist, but as a soul yearning for your warmth, your wisdom, and the unspoken words that dance under the moonlit sky." });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Mama Joji", dialogueText = "Perhaps, my dear Jonah, it's time to express what our hearts have known. Life is brief, akin to the herbs in our garden." });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Mama Joji", dialogueText = "Let's meet where the river meets the ancient oak tree. Under the starlit canopy, let our hearts speak, for love, like nature's healing touch, can mend the most broken spirits." });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Mama Joji", dialogueText = "Don’t forget that thing () - Tenderly, Mama Joji" });
-
+        
         // Continue with the remaining dialogue
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Susan", dialogueText = "You must really like her." });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Baba Jonah", dialogueText = "Since I was a little boy. Take this to her and tell her I hope she is still as beautiful as she looks in my dreams." });
@@ -203,14 +207,7 @@ public class DialogueManager : MonoBehaviour
        
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Susan", dialogueText = "I've brought all the herbs you requested. What's next?" });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Herbalist", dialogueText = "Excellent work, young one. Now, you must blend these herbs together. It's a puzzle of nature, a dance of flavors and scents." });
-
-        
-        DisplayNextLine();
-    }
-
-    public void Task5Final() //Completes Quest 3 Part2
-    {
-        
+        dialogueQueue.Enqueue(new Dialogue { speakerName = "Susan", dialogueText = "...*mixing ingredients*" });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Herbalist", dialogueText = "A splendid concoction! You have a keen eye and a skilled hand. This will aid my patient greatly." });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Susan", dialogueText = "Forgetting something?" });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Herbalist", dialogueText = "Oh, were you not paying attention? All these ingredients should help your friends." });
@@ -261,15 +258,7 @@ public class DialogueManager : MonoBehaviour
     public void Task7Dialogue() // Activates Quest 5
     {
         
-        dialogueQueue.Enqueue(new Dialogue { speakerName = "Herbalist", dialogueText = "Ah, it seems you've had a run-in with our notorious mosquitoes, eh? Fear not, my friend! I have just the remedy. Bring me the ingredients on this list, and we shall banish those pesky biters from your bloodstream!" });
-
-        
-        DisplayNextLine();
-    }
-
-    public void Task7Process()
-    {
-        
+        dialogueQueue.Enqueue(new Dialogue { speakerName = "Herbalist", dialogueText = "Ah, it seems you've had a run-in with our notorious mosquitoes, eh? Fear not, my friend! I have just the remedy. Bring me the ingredients on this list, and we shall banish those pesky biters from your bloodstream!" }); 
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Susan", dialogueText = "Oh, oh, this is bad! Mosquitoes got me at the dam, and now I need a cure! Help!" });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Herbalist", dialogueText = "Calm down, my friend! Panicking won't chase the mosquitoes away. Here's the list. Now, off you go, and remember, every minute you waste panicking, a mosquito throws a party inside you!" });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Susan", dialogueText = "But how can I carry out this task without panicking or making my condition worse than it already is!?" });
@@ -283,14 +272,7 @@ public class DialogueManager : MonoBehaviour
         
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Susan", dialogueText = "I've got them! Now, please, hurry! Mix them, make the medicine, save me from this malaria misery!" });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Herbalist", dialogueText = "Oh, my dear, you're in quite a state, aren't you? Fear not, for I shall whip up the antidote. But next time, maybe consider investing in a mosquito net?" });
-
-        
-        DisplayNextLine();
-    }
-
-    public void Task7Complete() //Complete Quest 5 Part2
-    {
-        
+        dialogueQueue.Enqueue(new Dialogue { speakerName = "Herbalist", dialogueText = "..." });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Herbalist", dialogueText = "Here you go, my dramatic friend! Drink this, and let it be a lesson: in the battle against mosquitoes, wit is your best weapon, not flailing like a windmill!" });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Susan", dialogueText = "I'll remember that, but right now, I'm just praying this medicine works!" });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Herbalist", dialogueText = "Fret not, my friend. With this, those malaria-causing miscreants will flee your system faster than you can say 'mosquito marathon'!" });
@@ -307,6 +289,7 @@ public class DialogueManager : MonoBehaviour
         {
             // End dialogue
             EndDialogue();
+            Checks.Talked = false;
             return;
         }
 

@@ -26,12 +26,12 @@ public class PlayerCollection : MonoBehaviour
     public bool NPCTutorialQuest = false;
     public bool NPCQuest1 = false;
     public bool NPCQuest11 = false;
-    public bool NPC2Talk = false;
     public bool NPCQuest12 = false;
     public bool NPCQuest2 = false;
     public bool NPCQuest3 = false;
     public bool NPCQuest4 = false;
     public bool NPCQuest5 = false;
+    public bool NPC2Talk = false;
 
     public bool FinalQuest = false;
 
@@ -137,7 +137,11 @@ public class PlayerCollection : MonoBehaviour
             Quest1Item1.SetActive(true);
 
             StartQuest1Message = true;
-            
+
+            //Dialogue
+            DialoguePanel.SetActive(true);
+            Dialogue.Task2Dialogue();
+
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask1 == true)
@@ -154,6 +158,10 @@ public class PlayerCollection : MonoBehaviour
             
             StartQuest1Part2Message = true;
             Quest1Item2.SetActive(true);
+
+            //Dialogue
+            DialoguePanel.SetActive (true);
+            Dialogue.Task2Complete();
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask11 == true)
@@ -170,6 +178,10 @@ public class PlayerCollection : MonoBehaviour
             StartQuest2Message = true;
             
             Quest2Item1.SetActive(true);
+
+            //Dialogue
+            DialoguePanel.SetActive(true);
+            Dialogue.TaskHoneyDialogue();
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask2 == true)
@@ -188,6 +200,10 @@ public class PlayerCollection : MonoBehaviour
             Quest3Item3.SetActive(true);
             
             StartQuest3Message = true;
+
+            //Dialogue
+            DialoguePanel.SetActive(true);
+            Dialogue.Task5Dialogue();
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask3 == true)
@@ -206,6 +222,10 @@ public class PlayerCollection : MonoBehaviour
             Quest4Item3.SetActive(true);
             
             StartQuest4Message = true;
+
+            //Dialogue
+            DialoguePanel.SetActive(true);
+            Dialogue.Task6Dialogue();
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask4 == true)
@@ -221,6 +241,10 @@ public class PlayerCollection : MonoBehaviour
             ActivateTask.ActivatedTask5 = true;
             
             StartQuest5Message = true;
+
+            //Dialogue
+            DialoguePanel.SetActive(true);
+            Dialogue.Task7Dialogue();
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask5 == true)
@@ -271,11 +295,24 @@ public class PlayerCollection : MonoBehaviour
             NPC1 = true;
             Quest2List.SetActive(true);
         }
-        if (collision.gameObject.name == "NPC2" && ActivateTask.Quest11.Count >= 1 && CheckInteraction.Talked == true)
+
+        if (collision.gameObject.name == "NPC2")
         {
-            NPC2Talk = true;
             NPC2 = true;
         }
+
+        if (ActivateTask.Quest11.Count >= 1)
+        {
+            if (/*CheckInteraction.Talked == true && */NPC2)
+            {
+                NPC2Talk = true;
+
+                //Dialogue
+                DialoguePanel.SetActive(true);
+                Dialogue.Task3Dialogue();
+            }
+        }
+
         if (collision.gameObject.name == "NPC3")
         {
             NPCQuest3 = true;
