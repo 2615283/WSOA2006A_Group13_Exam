@@ -33,6 +33,8 @@ public class PlayerCollection : MonoBehaviour
     public bool NPCQuest4 = false;
     public bool NPCQuest5 = false;
 
+    public bool FinalQuest = false;
+
     [Header("NPC Checks")]
     public bool TutorialNPC = false;
     public bool NPC1 = false;
@@ -43,23 +45,29 @@ public class PlayerCollection : MonoBehaviour
 
     [Header("Item Manager:")]
     [Header("Tutorial Items")]
+    public GameObject TutorialQuestList;
     public GameObject TutorialItem1;
     public GameObject TutorialItem2;
     public GameObject TutorialItem3;
 
     [Header("Quest 1 Items")]
+    public GameObject Quest1List1;
+    public GameObject Quest1List2;
     public GameObject Quest1Item1;
     public GameObject Quest1Item2;
 
     [Header("Quest 2 Items")]
+    public GameObject Quest2List;
     public GameObject Quest2Item1;
 
     [Header("Quest 3 Items")]
+    public GameObject Quest3List;
     public GameObject Quest3Item1;
     public GameObject Quest3Item2;
     public GameObject Quest3Item3;
 
     [Header("Quest 4 Items")]
+    public GameObject Quest4List;
     public GameObject Quest4Item1;
     public GameObject Quest4Item2;
     public GameObject Quest4Item3;
@@ -177,7 +185,7 @@ public class PlayerCollection : MonoBehaviour
         if (CheckInteraction.Talked == true && ActivateTask.CompleteTask4 == true)
         {
             ActivateTask.ActivatedTask5 = true;
-            ActivateTask.Description.text = "Quest5: Find the herbalist.";
+            ActivateTask.Description.text = "Quest5: Talk to the herbalist.";
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTask5 == true)
@@ -205,21 +213,25 @@ public class PlayerCollection : MonoBehaviour
         {
             NPCTutorialQuest = true;
             TutorialNPC = true;
+            TutorialQuestList.SetActive(true);
         }
         if (collision.gameObject.name == "NPC1")
         {
             NPCQuest1 = true;
             NPC1 = true;
+            Quest1List1.SetActive(true);
         }
         if (collision.gameObject.name == "NPC1" && ActivateTask.CompleteTask1 == true)
         {
             NPCQuest11 = true;
             NPC1 = true;
+            Quest1List2.SetActive(true);
         }
         if (collision.gameObject.name == "NPC1" && ActivateTask.CompleteTask11 == true)
         {
             NPCQuest2 = true;
             NPC1 = true;
+            Quest2List.SetActive(true);
         }
         if (collision.gameObject.name == "NPC2" && ActivateTask.Quest11.Count == 1 && CheckInteraction.Talked == true)
         {
@@ -230,11 +242,13 @@ public class PlayerCollection : MonoBehaviour
         {
             NPCQuest3 = true;
             NPC3 = true;
+            Quest3List.SetActive(true);
         }
         if (collision.gameObject.name == "NPC4")
         {
             NPCQuest4 = true;
             NPC4 = true;
+            Quest4List.SetActive(true);
         }
         if (collision.gameObject.name == "NPC3" && ActivateTask.CompleteTask3 == true)
         {
@@ -268,6 +282,12 @@ public class PlayerCollection : MonoBehaviour
         {
             StartFire = true;
             FireDisplay.SetActive(true);
+        }
+
+        //Checks if player is near their friend
+        if (collision.gameObject.name == "NPC5")
+        {
+           FinalQuest = true;
         }
 
     }

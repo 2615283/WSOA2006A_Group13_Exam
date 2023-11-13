@@ -74,7 +74,7 @@ public class TaskManager : MonoBehaviour
         if (TutorialQuest.Count == 3)
         {
             Description.text = "Tutorial Complete: Talk to the boy.";
-            if (UIChecks.Talked == true && Player.TutorialNPC == true)
+            if (UIChecks.Talked == true)
             {
                 CompleteTutorialTask = true;
                 RewardTutorial.SetActive(false); //removes the barrier
@@ -107,7 +107,8 @@ public class TaskManager : MonoBehaviour
         if (Quest2.Count == 1)
         {
             Description.text = "Quest2 Complete: Return to Mama Joji";
-            if (UIChecks.Talked == true && Player.NPC1 == true)
+
+            if (UIChecks.Talked == true)
             {
                 CompleteTask2 = true;
                 RewardTutorial4.SetActive(false);
@@ -122,7 +123,7 @@ public class TaskManager : MonoBehaviour
         if (Quest3.Count == 3)
         {
             Description.text = "Quest3 Complete: Return to herbalist";
-            if (UIChecks.Talked == true && Player.NPC3 == true)
+            if (UIChecks.Talked == true)
             {
                 CompleteTask3 = true;
                 Description.text = "You hear a loud rumble, go find the Hungry Villager";
@@ -136,7 +137,7 @@ public class TaskManager : MonoBehaviour
         if (Quest4.Count == 3)
         {
             Description.text = "Quest4 Complete: Return to the Hungry Villiager.";
-            if (UIChecks.Talked == true && Player.NPC4 == true)
+            if (UIChecks.Talked == true)
             {
                 CompleteTask4 = true;
                 Player.Inventory.Add(RewardQuest4.name);  
@@ -148,11 +149,15 @@ public class TaskManager : MonoBehaviour
         //Quest5
         if (Quest5.Count == 0 && ActivatedTask5 == true)
         {
-            CompleteTask5 = true;
-            Player.Inventory.Add(RewardQuest5.name);
-            Description.text = "Quest5 Complete: Go to your friend's house.";
-            Quest5.Clear();
-            RewardTutorial5.SetActive(false);
+            if (UIChecks.Talked == true)
+            {
+                CompleteTask5 = true;
+                Player.Inventory.Add(RewardQuest5.name);
+                Description.text = "Quest5 Complete: Go to your friend's house.";
+                Quest5.Clear();
+                RewardTutorial5.SetActive(false);
+            }
+            
         }
 
     }

@@ -28,6 +28,7 @@ public class UIManager : MonoBehaviour
     public float FireTimer = 2.0f;
     public float HoneyTimer = 2.0f;
     private bool FireStarter;
+    private bool GetHoney;
 
 
     void Start()
@@ -75,6 +76,13 @@ public class UIManager : MonoBehaviour
             }
         }
 
+        //opens whenplayer finishes the game
+        if (NPCCheck.FinalQuest == true)
+        {
+            EndScreen.SetActive(true);
+            Time.timeScale = 0;
+        }
+
         //If player is at hospital wait for key press
         if (Input.GetKeyDown(KeyCode.X))
         {
@@ -103,11 +111,16 @@ public class UIManager : MonoBehaviour
             Fire.SetActive(true);
             HoneyTimer -= Time.deltaTime;
             FireStarter = false;
+            GetHoney = true;
 
-            if (HoneyTimer <= 0)
+            if (GetHoney)
             {
-                Honey.SetActive(true);
-            }
+                if (HoneyTimer <= 0)
+                {
+                    Honey.SetActive(true);
+                    GetHoney = false;
+                }
+            }            
         }
     }
 
@@ -120,7 +133,7 @@ public class UIManager : MonoBehaviour
 
     public void ResetGame()
     {
-        SceneManager.LoadScene("UI Test");
+        SceneManager.LoadScene("Game World");
         Time.timeScale = 1;
     }
 
