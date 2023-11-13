@@ -22,6 +22,7 @@ public class TaskManager : MonoBehaviour
     public bool ActivatedTask1 = false;
     public List<string> Quest1;
     public bool CompleteTask1 = false;
+    public GameObject RewardTutorial2;
 
     [Header("Task 1 Part 2:")]
     public bool ActivatedTask11 = false;
@@ -33,12 +34,14 @@ public class TaskManager : MonoBehaviour
     public List<string> Quest12;
     public bool CompleteTask12 = false;
     public GameObject RewardQuest1;
+    public GameObject RewardTutorial3;
 
     [Header("Task 2:")]
     public bool ActivatedTask2 = false;
     public List<string> Quest2;
     public bool CompleteTask2 = false;
     public GameObject RewardQuest2;
+    public GameObject RewardTutorial4;
 
     [Header("Task 3:")]
     public bool ActivatedTask3 = false;
@@ -57,6 +60,7 @@ public class TaskManager : MonoBehaviour
     public List<string> Quest5;
     public bool CompleteTask5 = false;
     public GameObject RewardQuest5;
+    public GameObject RewardTutorial5;
 
     private void Start()
     {
@@ -80,6 +84,7 @@ public class TaskManager : MonoBehaviour
         if (Quest1.Count == 1)
         {
             CompleteTask1 = true;
+            RewardTutorial2.SetActive(false);
             Description.text = "Quest1 Part1 Complete: Return to Mama Joji";
             Quest1.Clear();
         }
@@ -92,6 +97,7 @@ public class TaskManager : MonoBehaviour
         if (Quest12.Count == 1)
         {
             CompleteTask12 = true;
+            RewardTutorial3.SetActive(false);
             Player.Inventory.Add(RewardQuest1.name);
             Quest12.Clear();
         }
@@ -100,6 +106,7 @@ public class TaskManager : MonoBehaviour
         if (Quest2.Count == 1)
         {
             CompleteTask2 = true;
+            RewardTutorial4.SetActive(false);
             Description.text = "Quest2 Complete: Return to Mama Joji";
             Player.Inventory.Add(RewardQuest2.name);
             Quest2.Clear(); 
@@ -130,6 +137,7 @@ public class TaskManager : MonoBehaviour
             Player.Inventory.Add(RewardQuest5.name);
             Description.text = "Quest5 Complete: Go to your friend's house.";
             Quest5.Clear();
+            RewardTutorial5.SetActive(false);
         }
 
     }
