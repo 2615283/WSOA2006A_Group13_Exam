@@ -35,7 +35,6 @@ public class NPCQuestScript : MonoBehaviour
         if (collision.gameObject.name == "NPC1")
         {
             
-
             Debug.Log("Found");
             ActivateTask.ActivatedTask1 = true;
         }

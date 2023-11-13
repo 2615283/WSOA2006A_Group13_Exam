@@ -83,7 +83,7 @@ public class TaskManager : MonoBehaviour
         }
 
         //Quest 1
-        if (Quest1.Count == 1 && !CompleteTask1)
+        if (Quest1.Count == 1)
         {
             CompleteTask1 = true;
             Description.text = "Quest1 Part1 Complete: Return to Mama Joji";

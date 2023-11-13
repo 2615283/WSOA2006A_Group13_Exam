@@ -20,9 +20,7 @@ public class UIManager : MonoBehaviour
     [Header("Checks:")]
     public bool Talked = false;
 
-    public DialogueManager dialogueManager;
-
-    public GameObject dialoguePanel;
+    
 
 
     void Start()
@@ -30,9 +28,7 @@ public class UIManager : MonoBehaviour
         //instantiates the PlayerCollection Script
         NPCCheck = PlayerScript.GetComponent<PlayerCollection>();
 
-        dialogueManager = FindObjectOfType<DialogueManager>();
-
-        dialoguePanel = dialogueManager.dialoguePanel;
+        
     }
 
 
@@ -71,11 +67,7 @@ public class UIManager : MonoBehaviour
         {
             if (NPCCheck.NPCNear)
             {
-                dialoguePanel.SetActive(true);
-
-                dialogueManager.StartDialogue();
-
-                
+                                
                 Talked = true;
             }
         }

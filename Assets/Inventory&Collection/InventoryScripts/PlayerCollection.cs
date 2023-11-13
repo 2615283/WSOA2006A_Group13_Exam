@@ -52,10 +52,21 @@ public class PlayerCollection : MonoBehaviour
     public GameObject Quest4Item2;
     public GameObject Quest4Item3;
 
+
+    public DialogueManager dialogueManager;
+
+    public GameObject dialoguePanel;
+
+
     void Start()
     {
         Inventory = new List<string>();
         Inventory.Add("Glasses");
+
+        dialogueManager = FindObjectOfType<DialogueManager>();
+
+        dialoguePanel = dialogueManager.dialoguePanel;
+
     }
 
     void Update()
@@ -179,37 +190,69 @@ public class PlayerCollection : MonoBehaviour
         if (collision.CompareTag("NPC"))
         {
             NPCNear = true;
+                        
         }
 
         //checks which NPC the player talked to
         if (collision.gameObject.name == "NPCTutorial")
         {
             NPCTutorialQuest = true;
+
+            dialoguePanel.SetActive(true);
+
+            dialogueManager.StartDialogue();
         }
         if (collision.gameObject.name == "NPC1")
         {
             NPCQuest1 = true;
+
+            dialoguePanel.SetActive(true);
+
+            dialogueManager.Task2Dialogue();
         }
         if (collision.gameObject.name == "NPC1" && ActivateTask.CompleteTask1 == true)
         {
             NPCQuest11 = true;
+            dialoguePanel.SetActive(true);
+
+            dialogueManager.Task2Complete();
+
         }
         if (collision.gameObject.name == "NPC2")
         {
             NPCQuest2 = true;
+
+            dialoguePanel.SetActive(true);
+
+            dialogueManager.Task3Dialogue();
         }
         if (collision.gameObject.name == "NPC3")
         {
             NPCQuest3 = true;
+
+            dialoguePanel.SetActive(true);
+
+            dialogueManager.TaskHoneyDialogue();
         }
         if (collision.gameObject.name == "NPC4")
         {
             NPCQuest4 = true;
+
+            dialoguePanel.SetActive(true);
+
+            dialogueManager.Task4Dialogue();
+
         }
         if (collision.gameObject.name == "NPC5")
         {
             NPCQuest5 = true;
+
+            dialoguePanel.SetActive(true);
+
+            dialogueManager.Task5Dialogue();
         }
+
+        //Task6, Task7 missing - Dialogue Manager refs
 
     }
 
