@@ -72,6 +72,10 @@ public class PlayerCollection : MonoBehaviour
     public GameObject Quest4Item2;
     public GameObject Quest4Item3;
 
+    [Header("Dialogue")]
+    public DialogueManager Dialogue;
+    public GameObject DialoguePanel;
+
     [Header("Controllers")]
     public GameObject VillageEntrance;
     public GameObject HospitalQuest;
@@ -92,6 +96,9 @@ public class PlayerCollection : MonoBehaviour
     {
         Inventory = new List<string>();
         Inventory.Add("Glasses");
+
+        Dialogue = FindObjectOfType<DialogueManager>();
+        DialoguePanel = Dialogue.dialoguePanel;
     }
 
     void Update()
@@ -109,7 +116,11 @@ public class PlayerCollection : MonoBehaviour
             TutorialItem3.SetActive(true);
 
             TutorialCompleteMessage = true;
-            
+
+            //Dialogue
+            DialoguePanel.SetActive(true);
+            Dialogue.StartDialogue();
+
         }
         //sets NPCQuest check as false once task is active
         if (ActivateTask.ActivatedTutorialTask == true)
@@ -240,12 +251,14 @@ public class PlayerCollection : MonoBehaviour
             TutorialNPC = true;
             TutorialQuestList.SetActive(true);
         }
+
         if (collision.gameObject.name == "NPC1")
         {
             NPCQuest1 = true;
             NPC1 = true;
             Quest1List1.SetActive(true);
         }
+
         if (collision.gameObject.name == "NPC1" && ActivateTask.CompleteTask1 == true)
         {
             NPCQuest11 = true;
