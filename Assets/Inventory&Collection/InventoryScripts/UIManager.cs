@@ -9,16 +9,25 @@ public class UIManager : MonoBehaviour
     public GameObject InventoryScreen;
     public GameObject PauseScreen;
     public GameObject StartScreen;
+    public GameObject MapScreen;
+    public GameObject EndScreen;
 
     [Header("NPC UI")]
     public GameObject DialogueScreen;
-    public GameObject TradeScreen;
 
     public PlayerCollection NPCCheck;
     public GameObject PlayerScript;
 
     [Header("Checks:")]
     public bool Talked = false;
+    public bool DeliveredPackage = false;
+
+    [Header("Triggers:")]  
+    public GameObject Fire;
+    public GameObject Honey;
+    public float FireTimer = 2.0f;
+    public float HoneyTimer = 2.0f;
+    private bool FireStarter;
 
 
     void Start()
@@ -49,14 +58,12 @@ public class UIManager : MonoBehaviour
             InventoryScreen.SetActive(true);
         }
 
-        /*//opens the Trade Screen if NPC is nearby
-        if (Input.GetKeyDown(KeyCode.R))
+        //opens map Screen
+        if (Input.GetKeyDown(KeyCode.M))
         {
-            if (NPCCheck.NPCNear)
-            {
-                TradeScreen.SetActive(true);
-            }
-        }*/
+            MapScreen.SetActive(true);
+            Time.timeScale = 0;
+        }
 
         //starts dialogue scene with NPC - possibly going to change
         if (Input.GetKeyDown(KeyCode.Q))
@@ -68,6 +75,40 @@ public class UIManager : MonoBehaviour
             }
         }
 
+        //If player is at hospital wait for key press
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            if (NPCCheck.Hospital == true)
+            {
+                DeliveredPackage = true;
+                NPCCheck.HospitalDisplay.SetActive(false);
+                NPCCheck.HospitalQuest.SetActive(false);
+            }
+
+            if (NPCCheck.StartFire == true)
+            {
+                NPCCheck.FireDisplay.SetActive(false);
+                FireStarter = true;              
+            }
+        }
+
+        //triggers timers for fire and honey
+        if (FireStarter == true)
+        {
+            FireTimer -= Time.deltaTime;
+        }
+
+        if (FireTimer <= 0)
+        {
+            Fire.SetActive(true);
+            HoneyTimer -= Time.deltaTime;
+            FireStarter = false;
+
+            if (HoneyTimer <= 0)
+            {
+                Honey.SetActive(true);
+            }
+        }
     }
 
     public void Play()
@@ -99,5 +140,11 @@ public class UIManager : MonoBehaviour
     {
         DialogueScreen.SetActive(false);
         Talked = false;
+    }
+
+    public void CloseMapScreen()
+    {
+        MapScreen.SetActive(false);
+        Time.timeScale = 1;
     }
 }

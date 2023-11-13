@@ -23,6 +23,7 @@ public class TradeableItem : MonoBehaviour
         {
             gameObject.SetActive(false);
             Collected.Inventory.Add(gameObject.name);
+            Collected.Fire.SetActive(true);
         }
     }
 }

@@ -9,10 +9,14 @@ public class TaskManager : MonoBehaviour
     public PlayerCollection Player;
     public GameObject PlayerManager;
 
+    [Header("UIChecks: ")]
+    public UIManager UIChecks;
+    public GameObject UIManagerObject;
+
     [Header("Task Descriptions")]
     public TMP_Text Description;
 
-    [Header("Tutorial Task")]
+    [Header("Tutorial Task:")]
     public bool ActivatedTutorialTask = false;
     public List<string> TutorialQuest;
     public bool CompleteTutorialTask = false;
@@ -28,11 +32,6 @@ public class TaskManager : MonoBehaviour
     public bool ActivatedTask11 = false;
     public List<string> Quest11;
     public bool CompleteTask11 = false;
-
-    [Header("Task 1 Part 3:")]
-    public bool ActivatedTask12 = false;
-    public List<string> Quest12;
-    public bool CompleteTask12 = false;
     public GameObject RewardQuest1;
     public GameObject RewardTutorial3;
 
@@ -64,6 +63,7 @@ public class TaskManager : MonoBehaviour
 
     private void Start()
     {
+        UIChecks = UIManagerObject.GetComponent<UIManager>();
         Player = PlayerManager.GetComponent<PlayerCollection>();
         Description.text = "Tutorial: Find the little boy";
     }
@@ -73,61 +73,76 @@ public class TaskManager : MonoBehaviour
         //Tutroial Quest
         if (TutorialQuest.Count == 3)
         {
-            CompleteTutorialTask = true;
-            RewardTutorial.SetActive(false); //removes the barrier
-            Description.text = "Tutorial Complete: Find the way to the village.";
-            Player.Inventory.RemoveAll(x => TutorialQuest.Contains(x));
-            TutorialQuest.Clear();
+            Description.text = "Tutorial Complete: Talk to the boy.";
+            if (UIChecks.Talked == true && Player.TutorialNPC == true)
+            {
+                CompleteTutorialTask = true;
+                RewardTutorial.SetActive(false); //removes the barrier
+                Description.text = "Tutorial Complete: Find the way to the village.";
+                Player.Inventory.RemoveAll(x => TutorialQuest.Contains(x));
+                TutorialQuest.Clear();
+            }
         }
 
         //Quest 1
-        if (Quest1.Count == 1)
+        if (UIChecks.DeliveredPackage == true)
         {
             CompleteTask1 = true;
             RewardTutorial2.SetActive(false);
             Description.text = "Quest1 Part1 Complete: Return to Mama Joji";
+            Player.Inventory.RemoveAll(x => Quest1.Contains(x));
             Quest1.Clear();
         }
-        if (Quest11.Count == 1)
+        if (Player.NPC2Talk == true)
         {
             CompleteTask11 = true;
             Description.text = "Quest1 Part2 Complete: Return to Mama Joji";
+            Player.Inventory.RemoveAll(x => Quest11.Contains(x));
+            Player.Inventory.Add(RewardQuest1.name);
+            RewardTutorial3.SetActive(false);
             Quest11.Clear();
         }
-        if (Quest12.Count == 1)
-        {
-            CompleteTask12 = true;
-            RewardTutorial3.SetActive(false);
-            Player.Inventory.Add(RewardQuest1.name);
-            Quest12.Clear();
-        }
-
+         
         //Quest2
         if (Quest2.Count == 1)
         {
-            CompleteTask2 = true;
-            RewardTutorial4.SetActive(false);
             Description.text = "Quest2 Complete: Return to Mama Joji";
-            Player.Inventory.Add(RewardQuest2.name);
-            Quest2.Clear(); 
+            if (UIChecks.Talked == true && Player.NPC1 == true)
+            {
+                CompleteTask2 = true;
+                RewardTutorial4.SetActive(false);
+                Description.text = "You need help - Go talk to the herbalist";
+                Player.Inventory.RemoveAll(x => Quest2.Contains(x));
+                Player.Inventory.Add(RewardQuest2.name);
+                Quest2.Clear();
+            }
         }
 
         //Quest3
         if (Quest3.Count == 3)
         {
-            CompleteTask3 = true;
             Description.text = "Quest3 Complete: Return to herbalist";
-            Player.Inventory.Add(RewardQuest3.name);
-            Quest3.Clear();
+            if (UIChecks.Talked == true && Player.NPC3 == true)
+            {
+                CompleteTask3 = true;
+                Description.text = "You hear a loud rumble, go find the Hungry Villager";
+                Player.Inventory.RemoveAll(x => Quest3.Contains(x));
+                Player.Inventory.Add(RewardQuest3.name);
+                Quest3.Clear();
+            }
         }
 
         //Quest4
         if (Quest4.Count == 3)
         {
-            CompleteTask4 = true;
-            Player.Inventory.Add(RewardQuest4.name);
             Description.text = "Quest4 Complete: Return to the Hungry Villiager.";
-            Quest4.Clear();
+            if (UIChecks.Talked == true && Player.NPC4 == true)
+            {
+                CompleteTask4 = true;
+                Player.Inventory.Add(RewardQuest4.name);  
+                Player.Inventory.RemoveAll(x => Quest4.Contains(x));
+                Quest4.Clear();
+            }
         }
 
         //Quest5

@@ -8,6 +8,7 @@ public class PlayerCollection : MonoBehaviour
     [Header("Collecting:")]
     public bool Found = false;
     public List<string> Inventory;
+    public bool Hospital = false;
 
     [Header("NPC UI")]
     public bool NPCNear = false;
@@ -16,6 +17,8 @@ public class PlayerCollection : MonoBehaviour
 
     [Header("Display")]
     public TMP_Text InventoryDisplay;
+    public GameObject HospitalDisplay;
+    public GameObject FireDisplay;
 
     [Header("Quest Control")]
     public TaskManager ActivateTask;
@@ -23,11 +26,20 @@ public class PlayerCollection : MonoBehaviour
     public bool NPCTutorialQuest = false;
     public bool NPCQuest1 = false;
     public bool NPCQuest11 = false;
+    public bool NPC2Talk = false;
     public bool NPCQuest12 = false;
     public bool NPCQuest2 = false;
     public bool NPCQuest3 = false;
     public bool NPCQuest4 = false;
     public bool NPCQuest5 = false;
+
+    [Header("NPC Checks")]
+    public bool TutorialNPC = false;
+    public bool NPC1 = false;
+    public bool NPC2 = false;
+    public bool NPC3 = false;
+    public bool NPC4 = false;
+    public bool NPC5 = false;
 
     [Header("Item Manager:")]
     [Header("Tutorial Items")]
@@ -51,6 +63,13 @@ public class PlayerCollection : MonoBehaviour
     public GameObject Quest4Item1;
     public GameObject Quest4Item2;
     public GameObject Quest4Item3;
+
+    [Header("Controllers")]
+    public GameObject VillageEntrance;
+    public GameObject HospitalQuest;
+    public GameObject Beehive;
+    public GameObject Fire;
+    public bool StartFire = false;
 
     void Start()
     {
@@ -97,12 +116,12 @@ public class PlayerCollection : MonoBehaviour
         //Checks if the correct NPC has been talked to and activates the task
         if (CheckInteraction.Talked == true && NPCQuest11 == true)
         {
-            ActivateTask.ActivatedTask1 = true;
+            ActivateTask.ActivatedTask11 = true;
             ActivateTask.Description.text = "Quest1 Part2: Take the letter to Baba Jonah";
             Quest1Item2.SetActive(true);
         }
         //sets NPCQuest check as false once task is active
-        if (ActivateTask.ActivatedTask1 == true)
+        if (ActivateTask.ActivatedTask11 == true)
         {
             NPCQuest11 = false;
         }
@@ -185,30 +204,70 @@ public class PlayerCollection : MonoBehaviour
         if (collision.gameObject.name == "NPCTutorial")
         {
             NPCTutorialQuest = true;
+            TutorialNPC = true;
         }
         if (collision.gameObject.name == "NPC1")
         {
             NPCQuest1 = true;
+            NPC1 = true;
         }
         if (collision.gameObject.name == "NPC1" && ActivateTask.CompleteTask1 == true)
         {
             NPCQuest11 = true;
+            NPC1 = true;
         }
         if (collision.gameObject.name == "NPC1" && ActivateTask.CompleteTask11 == true)
         {
             NPCQuest2 = true;
+            NPC1 = true;
+        }
+        if (collision.gameObject.name == "NPC2" && ActivateTask.Quest11.Count == 1 && CheckInteraction.Talked == true)
+        {
+            NPC2Talk = true;
+            NPC2 = true;
         }
         if (collision.gameObject.name == "NPC3")
         {
             NPCQuest3 = true;
+            NPC3 = true;
         }
         if (collision.gameObject.name == "NPC4")
         {
             NPCQuest4 = true;
+            NPC4 = true;
         }
-        if (collision.gameObject.name == "NPC5")
+        if (collision.gameObject.name == "NPC3" && ActivateTask.CompleteTask3 == true)
         {
             NPCQuest5 = true;
+            NPC3 = true;
+        }
+
+        //Checks if player is at the hospital
+        if (collision.gameObject.name == "HospitalDelivery")
+        {
+            Hospital = true;
+            HospitalDisplay.SetActive(true);
+        }
+
+        //Checks if player has entered the village
+        if (collision.gameObject.name == "VillageEntrance")
+        {
+            ActivateTask.Description.text = "Find Mama Joji (Hint she has the greyest hair)";
+            VillageEntrance.SetActive(false);
+        }
+
+        //Checks if player found the beehive
+        if (collision.gameObject.name == "FindBeehive")
+        {
+            ActivateTask.Description.text = "You need to create a fire, find a stick.";
+            Beehive.SetActive(false);
+        }
+
+        //Checks if player is able to make a fire
+        if (collision.gameObject.name == "CreateFire")
+        {
+            StartFire = true;
+            FireDisplay.SetActive(true);
         }
 
     }
@@ -217,6 +276,15 @@ public class PlayerCollection : MonoBehaviour
     {
         Found = false;
         NPCNear = false;
+        Hospital = false;
+        StartFire = false;
+
+        TutorialNPC = false;
+        NPC1 = false;
+        NPC2 = false;
+        NPC3 = false;
+        NPC4 = false;
+        NPC5 = false;
     }
 
 }
