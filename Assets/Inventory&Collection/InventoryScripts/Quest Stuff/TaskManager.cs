@@ -69,14 +69,9 @@ public class TaskManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Player.TutorialCompleteMessage == true)
-        {
-           Description.text = "Tutorial: Find the items and give them to the boy.";
-        }
-
         //gives the reward to player if all the necessary items are collected
         //Tutroial Quest
-        if (TutorialQuest.Count == 3)
+        if (TutorialQuest.Count >= 3)
         {
             Description.text = "Tutorial Complete: Talk to the boy.";
             if (UIChecks.Talked == true)
@@ -94,28 +89,25 @@ public class TaskManager : MonoBehaviour
         }
 
         //Quest 1
-        if (Player.StartQuest1Message == true)
-        {
-            Description.text = "Quest1: Take the package to the hospital";
-        }
         if (UIChecks.DeliveredPackage == true)
         {
             CompleteTask1 = true;
             RewardTutorial2.SetActive(false);
-            Description.text = "Quest1 Part1 Complete: Return to Mama Joji";
+            
+            Player.Quest1Start.SetActive(false);
+            Player.Quest1End.SetActive(true);
+
             Player.Inventory.RemoveAll(x => Quest1.Contains(x));
             Quest1.Clear();
-        }
-
-        if (Player.StartQuest1Part2Message == true)
-        {
-            Description.text = "Quest1 Part2: Take the letter to Baba Jonah";
         }
 
         if (Player.NPC2Talk == true)
         {
             CompleteTask11 = true;
-            Description.text = "Quest1 Part2 Complete: Return to Mama Joji";
+            
+            Player.Quest11Start.SetActive(false);
+            Player.Quest11End.SetActive(true);
+
             Player.Inventory.RemoveAll(x => Quest11.Contains(x));
             Player.Inventory.Add(RewardQuest1.name);
             RewardTutorial3.SetActive(false);
@@ -124,19 +116,19 @@ public class TaskManager : MonoBehaviour
         }
          
         //Quest2
-        if (Player.StartQuest2Message == true)
+        if (Quest2.Count >= 1)
         {
-            Description.text = "Quest2: Find the beehive";
-        }
-        if (Quest2.Count == 1)
-        {
-            Description.text = "Quest2 Complete: Return to Mama Joji";
+            Player.BeehiveInfo.SetActive(false);
+            Player.Quest2End.SetActive(true);
 
             if (UIChecks.Talked == true)
             {
                 CompleteTask2 = true;
                 RewardTutorial4.SetActive(false);
-                Description.text = "You need help - Go talk to the herbalist";
+
+                Player.Quest2End.SetActive(false);
+                Player.InBetweenQuest1.SetActive(true);
+
                 Player.Inventory.RemoveAll(x => Quest2.Contains(x));
                 Player.Inventory.Add(RewardQuest2.name);
                 Quest2.Clear();
@@ -148,17 +140,18 @@ public class TaskManager : MonoBehaviour
         }
 
         //Quest3
-        if (Player.StartQuest3Message == true)
+        if (Quest3.Count >= 3)
         {
-            Description.text = "Quest3: Find the ingredients for the herbalist.";
-        }
-        if (Quest3.Count == 3)
-        {
-            Description.text = "Quest3 Complete: Return to herbalist";
+            Player.Quest3Start.SetActive(false);
+            Player.Quest3End.SetActive(true);
+
             if (UIChecks.Talked == true)
             {
                 CompleteTask3 = true;
-                Description.text = "You hear a loud rumble, go find the Hungry Villager";
+
+                Player.Quest3End.SetActive(false);
+                Player.InBetweenQuest2.SetActive(true);
+
                 Player.Inventory.RemoveAll(x => Quest3.Contains(x));
                 Player.Inventory.Add(RewardQuest3.name);
                 Quest3.Clear();
@@ -170,17 +163,19 @@ public class TaskManager : MonoBehaviour
         }
 
         //Quest4
-        if (Player.StartQuest4Message == true)
+        if (Quest4.Count >= 3)
         {
-            Description.text = "Quest4: Find a fish and ingredients.";
-        }
-        if (Quest4.Count == 3)
-        {
-            Description.text = "Quest4 Complete: Return to the Hungry Villiager.";
+            Player.Quest4Start.SetActive(false);
+            Player.Quest4End.SetActive(true);
+
             if (UIChecks.Talked == true)
             {
                 CompleteTask4 = true;
                 Player.Inventory.Add(RewardQuest4.name);  
+
+                Player.Quest4End.SetActive(false);
+                Player.Quest5Start.SetActive(true);
+
                 Player.Inventory.RemoveAll(x => Quest4.Contains(x));
                 Quest4.Clear();
 
@@ -191,17 +186,16 @@ public class TaskManager : MonoBehaviour
         }
 
         //Quest5
-        if (Player.StartQuest5Message == true)
-        {
-            Description.text = "Quest5: Talk to the herbalist.";
-        }
         if (Quest5.Count == 0 && ActivatedTask5 == true)
         {
             if (UIChecks.Talked == true)
             {
                 CompleteTask5 = true;
                 Player.Inventory.Add(RewardQuest5.name);
-                Description.text = "Quest5 Complete: Go to your friend's house.";
+                
+                Player.Quest5Start.SetActive(false);
+                Player.Quest5End.SetActive(true);
+
                 Quest5.Clear();
                 RewardTutorial5.SetActive(false);
 

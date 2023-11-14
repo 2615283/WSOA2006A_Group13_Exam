@@ -84,13 +84,22 @@ public class PlayerCollection : MonoBehaviour
     public bool StartFire = false;
 
     [Header("Quest List Controllers:")]
-    public bool TutorialCompleteMessage = false;
-    public bool StartQuest1Message = false;
-    public bool StartQuest1Part2Message = false;
-    public bool StartQuest2Message = false;
-    public bool StartQuest3Message = false;
-    public bool StartQuest4Message = false;
-    public bool StartQuest5Message = false;
+    public GameObject TutorialDescription;
+    public GameObject Quest1Start;
+    public GameObject Quest1End;
+    public GameObject Quest11Start;
+    public GameObject Quest11End;
+    public GameObject Quest2Start;
+    public GameObject BeehiveInfo;
+    public GameObject Quest2End;
+    public GameObject InBetweenQuest1;
+    public GameObject Quest3Start;
+    public GameObject Quest3End;
+    public GameObject InBetweenQuest2;
+    public GameObject Quest4Start;
+    public GameObject Quest4End;
+    public GameObject Quest5Start;
+    public GameObject Quest5End;
 
     void Start()
     {
@@ -111,11 +120,10 @@ public class PlayerCollection : MonoBehaviour
         if (CheckInteraction.Talked == true && NPCTutorialQuest== true)
         {
             ActivateTask.ActivatedTutorialTask = true;
+            ActivateTask.Description.text = "Tutorial: Find the items and give them to the boy.";
             TutorialItem1.SetActive(true);
             TutorialItem2.SetActive(true);
             TutorialItem3.SetActive(true);
-
-            TutorialCompleteMessage = true;
 
             //Dialogue
             DialoguePanel.SetActive(true);
@@ -126,7 +134,6 @@ public class PlayerCollection : MonoBehaviour
         if (ActivateTask.ActivatedTutorialTask == true)
         {
             NPCTutorialQuest = false;
-            TutorialCompleteMessage = false;
         }
 
         //Quest 1.1
@@ -134,9 +141,11 @@ public class PlayerCollection : MonoBehaviour
         if (CheckInteraction.Talked == true && NPCQuest1 == true)
         {
             ActivateTask.ActivatedTask1 = true;
-            Quest1Item1.SetActive(true);
 
-            StartQuest1Message = true;
+            TutorialDescription.SetActive(false);
+            Quest1Start.SetActive(true);
+
+            Quest1Item1.SetActive(true);
 
             //Dialogue
             DialoguePanel.SetActive(true);
@@ -147,7 +156,6 @@ public class PlayerCollection : MonoBehaviour
         if (ActivateTask.ActivatedTask1 == true)
         {
             NPCQuest1 = false;
-            StartQuest1Message = false;
         }
 
         //Quest 1.2
@@ -155,8 +163,11 @@ public class PlayerCollection : MonoBehaviour
         if (CheckInteraction.Talked == true && NPCQuest11 == true)
         {
             ActivateTask.ActivatedTask11 = true;
-            
-            StartQuest1Part2Message = true;
+
+            Quest11Start.SetActive(true) ;
+            CheckInteraction.DeliveredPackage = false;
+            Quest1End.SetActive(false);
+
             Quest1Item2.SetActive(true);
 
             //Dialogue
@@ -167,7 +178,6 @@ public class PlayerCollection : MonoBehaviour
         if (ActivateTask.ActivatedTask11 == true)
         {
             NPCQuest11 = false;
-            StartQuest1Part2Message = false;
         }
 
         //Quest 2
@@ -175,8 +185,10 @@ public class PlayerCollection : MonoBehaviour
         if (CheckInteraction.Talked == true && NPCQuest2 == true)
         {
             ActivateTask.ActivatedTask2 = true;
-            StartQuest2Message = true;
             
+            Quest2Start.SetActive(true);
+            Quest11End.SetActive(false);
+
             Quest2Item1.SetActive(true);
 
             //Dialogue
@@ -187,7 +199,6 @@ public class PlayerCollection : MonoBehaviour
         if (ActivateTask.ActivatedTask2 == true)
         {
             NPCQuest2 = false;
-            StartQuest2Message = false;
         }
 
         //Quest 3
@@ -195,11 +206,13 @@ public class PlayerCollection : MonoBehaviour
         if (CheckInteraction.Talked == true && NPCQuest3 == true)
         {
             ActivateTask.ActivatedTask3 = true;
+           
+            Quest3Start.SetActive(true);
+            InBetweenQuest1.SetActive(false);
+
             Quest3Item1.SetActive(true);
             Quest3Item2.SetActive(true);
-            Quest3Item3.SetActive(true);
-            
-            StartQuest3Message = true;
+            Quest3Item3.SetActive(true);            
 
             //Dialogue
             DialoguePanel.SetActive(true);
@@ -209,7 +222,6 @@ public class PlayerCollection : MonoBehaviour
         if (ActivateTask.ActivatedTask3 == true)
         {
             NPCQuest3 = false;
-            StartQuest3Message = false;
         }
 
         //Quest 4
@@ -217,11 +229,13 @@ public class PlayerCollection : MonoBehaviour
         if (CheckInteraction.Talked == true && NPCQuest4 == true)
         {
             ActivateTask.ActivatedTask4 = true;
+            
+            InBetweenQuest2.SetActive(false);
+            Quest4Start.SetActive(true);
+
             Quest4Item1.SetActive(true);
             Quest4Item2.SetActive(true);
             Quest4Item3.SetActive(true);
-            
-            StartQuest4Message = true;
 
             //Dialogue
             DialoguePanel.SetActive(true);
@@ -231,7 +245,6 @@ public class PlayerCollection : MonoBehaviour
         if (ActivateTask.ActivatedTask4 == true)
         {
             NPCQuest4 = false;
-            StartQuest4Message = false;
         }
 
         //Quest 5
@@ -239,9 +252,7 @@ public class PlayerCollection : MonoBehaviour
         if (CheckInteraction.Talked == true && NPCQuest5 == true)
         {
             ActivateTask.ActivatedTask5 = true;
-            
-            StartQuest5Message = true;
-
+           
             //Dialogue
             DialoguePanel.SetActive(true);
             Dialogue.Task7Dialogue();
@@ -250,7 +261,6 @@ public class PlayerCollection : MonoBehaviour
         if (ActivateTask.ActivatedTask5 == true)
         {
             NPCQuest5 = false;
-            StartQuest5Message = false;
         }
     }
 
@@ -348,7 +358,9 @@ public class PlayerCollection : MonoBehaviour
         //Checks if player found the beehive
         if (collision.gameObject.name == "FindBeehive")
         {
-            ActivateTask.Description.text = "You need to create a fire, find a stick.";
+            Quest2Start.SetActive(false);
+            BeehiveInfo.SetActive(true);
+        
             Beehive.SetActive(false);
         }
 
