@@ -211,8 +211,8 @@ public class DialogueManager : MonoBehaviour
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Herbalist", dialogueText = "A splendid concoction! You have a keen eye and a skilled hand. This will aid my patient greatly." });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Susan", dialogueText = "Forgetting something?" });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Herbalist", dialogueText = "Oh, were you not paying attention? All these ingredients should help your friends." });
-        dialogueQueue.Enqueue(new Dialogue { speakerName = "Herbalist", dialogueText = "As promised, here is the item for NPC 3. Your efforts will not be forgotten." });
-        dialogueQueue.Enqueue(new Dialogue { speakerName = "Susan", dialogueText = "Thanks… wait, how did you know it was for NPC 3?" });
+        dialogueQueue.Enqueue(new Dialogue { speakerName = "Herbalist", dialogueText = "As promised, here is the item for the villager. Your efforts will not be forgotten." });
+        dialogueQueue.Enqueue(new Dialogue { speakerName = "Susan", dialogueText = "Thanks… wait, how did you know it was for the villager?" });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Herbalist", dialogueText = "Smirking) I have my ways." });
 
         
@@ -245,7 +245,7 @@ public class DialogueManager : MonoBehaviour
     public void Task6Complete() //Completes Quest 4
     {
         
-        dialogueQueue.Enqueue(new Dialogue { speakerName = "Susan", dialogueText = "Here you go, NPC 4! A feast to satisfy your hunger and herbs to scare those mosquitoes. These herbs will keep the pests away, and the fish is as fresh as your haircut." });
+        dialogueQueue.Enqueue(new Dialogue { speakerName = "Susan", dialogueText = "Here you go, Hungry Villager! A feast to satisfy your hunger and herbs to scare those mosquitoes. These herbs will keep the pests away, and the fish is as fresh as your haircut." });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Hungry Villager", dialogueText = "Ah, you've done it! My belly shall sing with joy, and the mosquitoes shall dance elsewhere! You're a lifesaver, my clever friend! Tell me, where did you learn to outsmart both my appetite and these pesky insects?" });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Susan", dialogueText = "Well, let's just say I've had my fair share of encounters with stubborn critters and even hungrier friends back in my hometown. It's all about finding the right recipe!" });
         dialogueQueue.Enqueue(new Dialogue { speakerName = "Hungry Villager", dialogueText = "Haha, you're not just resourceful; you're also quite the storyteller! We'll be telling tales of your cleverness for generations. Here, take this insect repellent I've crafted. May it shield you from the mosquito army on your adventures." });

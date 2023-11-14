@@ -80,7 +80,7 @@ public class UIManager : MonoBehaviour
         if (NPCCheck.FinalQuest == true)
         {
             EndScreen.SetActive(true);
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
         }
 
         //If player is at hospital wait for key press

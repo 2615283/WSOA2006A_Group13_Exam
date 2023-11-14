@@ -6,6 +6,8 @@ public class TradeableItem : MonoBehaviour
     public PlayerCollection Collected;
     public GameObject Player;
 
+    public AudioSource PickupSound;
+
     void Start()
     {
         Collected = Player.GetComponent<PlayerCollection>();
@@ -24,6 +26,16 @@ public class TradeableItem : MonoBehaviour
             gameObject.SetActive(false);
             Collected.Inventory.Add(gameObject.name);
             Collected.Fire.SetActive(true);
+
+            PlayPickupSound();
+        }
+    }
+
+    private void PlayPickupSound()
+    {
+        if (PickupSound != null)
+        {
+            PickupSound.Play();
         }
     }
 }
